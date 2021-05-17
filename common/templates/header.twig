@@ -3,13 +3,7 @@
 		<title></title>
 		<!-- Bootstrap 5 CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-		<!-- Boostrap 5 JS -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-		<!-- Bootstrap 5 Bundle -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-		<!-- Bootstrap 5 Separate -->
-		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
 
 		<link rel="stylesheet" type="text/css" href="color_local.css">
 		<link rel="stylesheet" type="text/css" href="./common/style.css">
@@ -20,79 +14,66 @@
 		<script src="./common/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 		<!--script src="jquery-validation-1.17.0/additional-methods.min.js"></script-->
 		<script src="./common/jquery-validation-1.17.0/jquery.validate.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js" integrity="sha512-g2PN+aYR0KupTVwea5Ppqw4bxWLLypWdd+h7E0ydT8zF+/Y2Qpk8Y1SnzVw6ZCVJPrgB/91s3VfhVhP7Y4+ucw==" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/js/bootstrap.min.js" integrity="sha512-mp3VeMpuFKbgxm/XMUU4QQUcJX4AZfV5esgX72JQr7H7zWusV6lLP1S78wZnX2z9dwvywil1VHkHZAqfGOW7Nw==" crossorigin="anonymous"></script>
 	</head>
 	<body>
-
 		{% if want_menu == true %}
-			<div id='cssmenu'>
-				<ul>
-					<li>
-						<a href='index.php'>
-							<span>Home</span>
-						</a>
-					</li>
-					<li>
-						<a href='basket.php'>
-							<span>Basket</span>
-						</a>
-					</li>
-					<li>
-						<a href='about.php'>
-							<span>About</span>
-						</a>
-					</li>
-					{% if user_id != -1 %}
-						<li class='has-sub'>
-							<a href='#'>
-								<span>Database Management</span>
-							</a>
-							<ul>
-								<li><a href='manage_meta.php?table=record'><span>Records</span></a></li>
-								<li><a href='manage_meta.php?table=production'><span>Productions</span></a></li>
-								<li><a href='manage_meta.php?table=speaker'><span>Speakers</span></a></li>
-								<li><a href='remake_db.php'><span>Recalculate database</span></a></li>
-							</ul>
-						</li>
-						<li>
-							<a href='edit.php'>
-								<span>Add element</span>
-							</a>
-						</li>
-						<li class='last'>
-							<a href='login.php?logout=1'>
-								<span>Logout</span>
-							</a>
-						</li>
-
-					</script>
-				{% else %}
-					<li>
-						<a href='login.php'>
-							<span>Admin</span>
-						</a>
-					</li>
-				{% endif %}
-			</ul>
+			<nav class="navbar navbar-expand-lg navbar-light bg-success mb-5">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="./">HOME</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link" href="basket.php">Basket</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="about.php">About</a>
+							</li>
+							{% if user_id != -1 %}
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Database Management
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<li>
+											<a class="dropdown-item" href="manage_meta.php?table=record">Records</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="manage_meta.php?table=production">Productions</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="manage_meta.php?table=speaker">Speakers</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="remake_db.php">Recalculate database</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="edit.php">Add element</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href='login.php?logout=1'>Logout</a>
+								</li>
+							</script>
+							{% else %}
+								<li class="nav-item">
+									<a class="nav-link" href="login.php">Admin</a>
+								</li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+			</nav>
 			{% if submenu is defined and submenu != ""%}
 				{{submenu|raw}}
 			{% endif %}
-
-		</div>
-		<br/>
-		<script type="text/javascript">
-			(function ($) {
-$(document).ready(function () {
-$('#cssmenu').prepend('<div id="menu-button">Menu</div>');
-$('#cssmenu #menu-button').on('click', function () {
-var menu = $(this).next('ul');
-if (menu.hasClass('open')) {
-menu.removeClass('open');
-} else {
-menu.addClass('open');
-}
-});
-});
-})(jQuery);
-		</script>
-	{% endif %}
+		{% endif %}
 	<div id="main">
+
+
