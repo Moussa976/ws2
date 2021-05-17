@@ -120,3 +120,28 @@ audio::-webkit-media-controls-play-button,
 }
 
 /****** MENU *******/
+#menuNav{
+  justify-content: center;
+}
+#menuNav li a.nav-link{
+  color: #000;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: green;
+}
+
+#menuNav li:first-child a.nav-link{
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+#menuNav li a.nav-link.dropdown-toggle{
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+
+#menuNav img.img-fluid{
+  width: 50%;
+  height: auto;
+}
