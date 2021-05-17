@@ -1,16 +1,15 @@
 {% include 'header.twig' %}
 
 {% if not basket %}
-	{% include 'filter_table.twig' with {'values': values, 'metas':metas}%}
-	<script type="text/javascript">
-		$("#edit_form").validate();
-	</script>
+	{# {% include 'filter_table.twig' with {'values': values, 'metas':metas}%} #}
 {% else %}
 	<a href='download_basket.php' target='_blank'>Download Basket</a><br/>&nbsp;<br/>
 {% endif %}
 
 {% include 'record_table.twig' with {'data': data, 'metas':metas}%}
-
+<script type="text/javascript">
+	$("#edit_form").validate();
+</script>
 <script type="text/javascript">
 	$("#edit_form").validate();
 	function add_to_basket(rid){

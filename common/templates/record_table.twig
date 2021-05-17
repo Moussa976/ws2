@@ -1,4 +1,44 @@
-<div class="rTable">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xl-3 mb-2">
+			<div class="h-100 bg-light p-2">
+				{% if not basket %}
+	{% include 'filter_table.twig' with {'values': values, 'metas':metas}%}
+{% else %}
+	<a href='download_basket.php' target='_blank'>Download Basket</a><br/>&nbsp;<br/>
+{% endif %}
+			</div>
+		</div>
+		<div class="col-xl-9">
+			<div class="table-responsive">
+				<table class="table table-success table-striped table-hover tablemanager">
+					<thead>
+						<tr>
+						  	<th scope="col"></th>
+							{% for data in metas["record"] %}
+								<th scope="col">{{data["label"]}}</th>
+							{% endfor %}
+						  	<th scope="col"></th>
+							{% for data in metas["production"] %}
+								<th scope="col">{{data["label"]}}</th>
+							{% endfor %}
+							{% for data in metas["speaker"] %}
+								<th scope="col">{{data["label"]}}</th>
+							{% endfor %}
+						  	<th scope="col"></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for data in results %}
+							{% include 'one_record.twig' with {'data': data, 'metas':metas} %}
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div class="rTable">
 	<div class="rTableHeading">
 		<div class="rTableHead">&nbsp;</div>
 		{% for data in metas["record"] %}
@@ -18,4 +58,25 @@
 				{% include 'one_record.twig' with {'data': data, 'metas':metas} %}
 	</div>
 	{% endfor %}
-</div>
+</div> -->
+{% block javascripts %}
+<script type="text/javascript" src="./common/js/tableManager.js"></script>
+<script type="text/javascript">
+	// basic usage
+	$('.tablemanager').tablemanager({
+		firstSort: [[3,0],[2,0],[1,'asc']],
+		disable: ["last"],
+		appendFilterby: false,
+		dateFormat: [[4,"mm-dd-yyyy"]],
+		debug: true,
+		vocabulary: {
+			voc_filter_by: 'Filter By',
+			voc_type_here_filter: 'Filter...',
+			voc_show_rows: 'Rows Per Page'
+		},
+		pagination: true,
+		showrows: [10,20,30,40,50,100,500],
+		disableFilterBy: [1]
+	});
+</script>
+{% endblock %}
