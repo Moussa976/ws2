@@ -35,18 +35,19 @@
 					</tbody>
 				</table>
 			</div>
-			<!-- Modal  -->
 			<!-- Modal -->
 			<div class="modal fade" id="ModalAudio" tabindex="-1" aria-labelledby="ModalAudioLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
-						<audio  controls preload="none" class="src_audio" src="" type="audio/wav">
+						<audio id="myAudio" controls preload="none">
+							<source id="src_audio" type="audio/wav">
 							Your browser does not support the
 							<code>audio</code> element.
 						</audio>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 </div> 
@@ -90,11 +91,14 @@
 		showrows: [10,20,30,40,50,100,500],
 		disableFilterBy: [1]
 	});
-	
+
 	function lireAudio(nomdufichier) {
-		var lemodal = $("#ModalAudio"), src_audio = $(".src_audio")
-		lemodal.show()
-		src_audio.attr('src',"./files/"+nomdufichier).play();
+
+		var lemodal = $("#ModalAudio"), src_audio = $("#src_audio"), myAudio = $("#myAudio")
+
+		console.log(lemodal.modal())
+		src_audio[0].setAttribute("src", "./files/"+nomdufichier);
+
 	}
 </script>
 {% endblock %}
