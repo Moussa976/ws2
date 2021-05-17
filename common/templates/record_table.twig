@@ -35,10 +35,22 @@
 					</tbody>
 				</table>
 			</div>
+			<!-- Modal  -->
+			<!-- Modal -->
+			<div class="modal fade" id="ModalAudio" tabindex="-1" aria-labelledby="ModalAudioLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<audio  controls preload="none" class="src_audio" src="" type="audio/wav">
+							Your browser does not support the
+							<code>audio</code> element.
+						</audio>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div> 
-<!-- <div class="rTable">
+{# <div class="rTable">
 	<div class="rTableHeading">
 		<div class="rTableHead">&nbsp;</div>
 		{% for data in metas["record"] %}
@@ -58,7 +70,7 @@
 				{% include 'one_record.twig' with {'data': data, 'metas':metas} %}
 	</div>
 	{% endfor %}
-</div> -->
+</div> #}
 {% block javascripts %}
 <script type="text/javascript" src="./common/js/tableManager.js"></script>
 <script type="text/javascript">
@@ -78,5 +90,11 @@
 		showrows: [10,20,30,40,50,100,500],
 		disableFilterBy: [1]
 	});
+	
+	function lireAudio(nomdufichier) {
+		var lemodal = $("#ModalAudio"), src_audio = $(".src_audio")
+		lemodal.show()
+		src_audio.attr('src',"./files/"+nomdufichier).play();
+	}
 </script>
 {% endblock %}

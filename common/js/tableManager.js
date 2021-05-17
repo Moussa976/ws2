@@ -820,9 +820,9 @@ Important! Do not edit this plugin if you're not sure you're doing it right. The
         string = string to pass by console.log
         **/
         function cLog(name, string = null) {
-            console.log(name);
+            // console.log(name);
             if (string != null) {
-                console.log(JSON.parse(JSON.stringify(string)));
+                // console.log(JSON.parse(JSON.stringify(string)));
             }
         }
     };
