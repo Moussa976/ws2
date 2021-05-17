@@ -115,7 +115,7 @@ audio::-webkit-media-controls-play-button,
   line-height: 1;
   display: block;
   position: relative;
-  font-family: georgia, serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 #cssmenu ul {
   list-style: none;
