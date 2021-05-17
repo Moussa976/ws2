@@ -4,6 +4,6 @@ $dbHost = "localhost";
 $dbUser = "root";
 $dbPassword = "";
 $dbName = "muriquis";
-$port = 3306;
+$port = 3306; 
 
 ?>
