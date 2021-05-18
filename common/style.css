@@ -134,3 +134,8 @@ body{
 	color: #FFF !important;
 	border-radius: 30px;
 }
+
+/**** Text Download ****/
+.text-download {
+	color: #1abc9c !important;
+}
