@@ -1,19 +1,25 @@
 {% include 'header.twig' with {'submenu': "<ul><li><a href='about.php?pid=1'><span>MURIQUIS’ VOCAL COMMUNICATION</span></a></li><li><a href='about.php?pid=2'><span>DESCRIPTION OF DATA AND TABLE</span></a></li></ul>"} %}
 
+<nav class="mb-4">
+    <div class="nav nav-tabs row text-center" id="nav-tab" role="tablist">
+        <a href='about.php?pid=1' class="nav-link col {% if pid == 1 %}active{% endif %}" id="nav-pid1-tab"  type="button" role="tab" aria-controls="nav-pid1" aria-selected="true">MURIQUIS’ VOCAL COMMUNICATION</a>
+        <a href='about.php?pid=2' class="nav-link col {% if pid == 2 %}active{% endif %}" id="nav-pid2-tab"  type="button" role="tab" aria-controls="nav-pid2" aria-selected="false">DESCRIPTION OF DATA AND TABLE</a>
+    </div>
+</nav>
+
 {% if pid == 1 %}
 <div id="about-img" class="container">
     <div class="row">
-        <div class="col-md-6">
+        <h1>MURIQUIS</h1>
+        <div class="col-xl-4 order-xl-2">
             <img class ="img-fluid" src="img/Nancy.jpg"/>
         </div>
-        
-        <div class="col-md-6">
-            <h1>MURIQUIS</h1>
+
+        <div class="col-xl-8 order-xl-1">
             <p>Muriquis are neotropical primates endemic to the Brazilian Atlantic forest, one of the world’s biodiversity “hotspots” (Myers et al, 2000). There are two recognized species: the Northern (Brachyteles hypoxanthus) and the Southern muriqui (Brachyteles arachnoides). Both species’ populations have been severely reduced in the last century, mainly due to habitat loss (Ingberman et al, 2016), and both are classified as critically endangered (Strier et al., 2017).</p>
             <p>Along with their Amazonian relatives, the spider monkeys (Ateles sp) and the wolly monkeys (Lagothrix sp and Oreonax flavicauda), muriquis compose the Atelinae subfamily of New World monkeys. Atelines are characterized by the use of suspensory postures and locomotion (i.e. tail assisted brachiation), a diet restricted to fruit and other vegetable materials, and by their relatively large sizes (di Fiori, 2017). The muriqui is actually the largest of all Netropical primates, and the largest endemic mammal of Brazil, as adults may reach 15 kg of weight (de Melo et al., 2005).</p>
             <p>Atelines resemble chimpanzees in some features of their social lives (Strier, 2007). For instance, they live in large multimale multifemale promiscuous groups that may travel and forage in temporarily independent subgroups of variable social composition (i.e. fission-fusion society - Symington, 1990). Like chimpanzees, ateline males are phylopatric while females usually change groups prior to reaching sexual maturity (Strier et al, 2015). Consequently, male group members form cohesive “clicks” of genetically related individuals who often interact with each other, while females in general display weaker social bonds (Tokuda et al., 2012). On the other hand, atelines are less aggressive and competitive than chimpanzees. In the case of muriquis, contest competition among group mates is extremely rare (Strier, 1992; Strier et al, 2002), and the occasional cases are restricted to chases and vocal threats that do not escalate to physical aggression (but see Talebi et al., 2009). Dominance relationships that are based on agonism are therefore absent both within and between sexes (Mendes, 1990; Arnedo, 2010).</p>
-        </div>
-        <div class="col-md-12">
+
             <h1>MURIQUIS’ VOCAL COMMUNICATION</h1>
             <h2>General Repertoire</h2>
             <p>The fluid spacing and the social complexity of muriquis’ fission-fusion society, along with the dense vegetation and low visibility of its forest habitat, should have favored the evolution of a complex vocal communicational system (Schamberg et al, 2016). Indeed, the relevance of vocal signals to the lives of muriquis have been recognized since the pioneer studies of Aguirre (1971) and Nishimura (1979) on the ecology and distribution of the genus. Later researchers described vocalizations that could be easily discriminated by ear and that were used by individuals of different sex-age classes (e.g. “mating tweeters”- Milton, 1985; affiliative “chuckles” Strier, 1986).  Systematic recordings and contextual data, however, have only been gathered during two doctoral research projects (Mendes, 1995; Arnedo, 2010). Both projects investigated the same population of Northern muriquis at the RPPN- Feliciano Miguel Abdala (or Biological Station of Caratinga - Strier, 1999). Current knowledge about muriquis’ vocalizations is therefore hindered by the lack of comparative data on different species and populations.</p>
@@ -32,12 +38,12 @@
 {% if pid == 2 %}
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <h1> DESCRIPTION OF DATA AND TABLE </h1>
+        <div class="col-xl-4 order-xl-2">
             <img  class="img-fluid" src="img/Diego.jpg"/>
         </div>
 
-        <div class="col-md-6">
-            <h1> DESCRIPTION OF DATA AND TABLE </h1>
+        <div class="col-xl-8 order-xl-1">
             <p>A more in depth description of the data can be found in <a href="files/description_of_data_and_table.docx" target="_blank">this file</a>.</p>
 
             <h2>Technical Information</h2>
@@ -47,8 +53,7 @@
             <p><i>Digital processing of recordings: </i> Software- Signal/RTS (® Engineering Design)<br/>Hardware- AD interface DT 281 (16 bits, sampling rate=25 kHz)<br/>DSO32C-80 board (arithmetic accelerator)<br/>FDI 901F low and high filter (200 Hz, 10 kHz; 30 kHz, 48db/octave)</p>
             <p><i>Period of Recording:</i> September 19th 1990 to February 3rd 1991</p>
             <p><i>Recorded by:</i> Dr. Francisco Dyonísio Cardoso Mendes<br/>PPG-CdC Ciências do Comportamento<br/>Depto de Processos Psicológicos Básicos<br/>Instituto de Psicologia, Universidade de Brasília</p>
-        </div>
-        <div class="col-md-12">
+
             <h2>Recordings and Data Collection</h2>
             <p>All sound files were recorded at the RPPN Feliciano Miguel Abdalla (former Biological Station of Caratinga - 19o 50’S  41o 50’ W), in the state of Minas Gerais, Brazil, as part of Mendes (1995) PhD research. Detailed information about the study site, its muriqui population and the long-term research project on the species can be found in the book “Faces in the Forest”, by K.B. Strier. </p>
             <p>Audio recordings were made with a Marantz PMD-420 cassete recorder and a Sennheiser K3N+ME80 microphone. Segments of recordings containing sequential calls were digitized and stored using a Signal/RTS system (16 bits, sample rate of 25 KhZ).</p>
