@@ -71,24 +71,3 @@
 	</div>
 	{% endfor %}
 </div> #}
-{% block javascripts %}
-<script type="text/javascript" src="./common/js/tableManager.js"></script>
-<script type="text/javascript">
-	// basic usage
-	$('.tablemanager').tablemanager({
-		firstSort: [[3,0],[2,0],[1,'asc']],
-		disable: ["last"],
-		appendFilterby: false,
-		dateFormat: [[4,"mm-dd-yyyy"]],
-		debug: true,
-		vocabulary: {
-			voc_filter_by: 'Filter By',
-			voc_type_here_filter: 'Filter...',
-			voc_show_rows: 'Rows Per Page'
-		},
-		pagination: true,
-		showrows: [10,20,30,40,50,100,500],
-		disableFilterBy: [1]
-	});
-</script>
-{% endblock %}
