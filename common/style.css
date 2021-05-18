@@ -4,7 +4,7 @@ body{
 }
 
 /****** FILTERS *****/
-.queryfilterglobal {
+/*.queryfilterglobal {
 	display: inline;
 }
 .queryfilter {
@@ -41,7 +41,7 @@ audio::-webkit-media-controls-play-button,
      audio::-webkit-media-controls-panel {
      background-color:var(--body-background-color);
      color: var(--body-color);
-     }
+     }*/
 
 /****** TABLE ******/
 .rTable {
