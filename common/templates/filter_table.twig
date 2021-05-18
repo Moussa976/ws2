@@ -1,37 +1,33 @@
-<div class="container">
+<form id="edit_form" method="post">
+	{% for key, data in metas %}
+		{% if data|length > 0 %}
+			<div>
+				<h1>Filters for table {{ key }}</h1>
+				{% for meta in data %}
 
-	<form id="edit_form" method="post">
-		{% for key, data in metas %}
-			{% if data|length > 0 %}
-				<div class="queryfilter">
-					<h1>Filters for table {{ key }}</h1>
-					{% for meta in data %}
+					<input class="form-control" type="hidden" name="field[{{meta.id}}]" value="{{ meta.field_name }}"/>
 
-						<input class="form-control" type="hidden" name="field[{{meta.id}}]" value="{{ meta.field_name }}"/>
+					{% if meta.type == 'txt' %}
+						{% include 'one_filter_txt.twig' with {'meta':meta, 'value':values[meta.id]}%}
+					{% endif %}
+					{% if meta.type == 'int' or meta.type == 'float'  %}
+						{% include 'one_filter_num.twig' with {'meta':meta, 'value':values[meta.id]}%}
+					{% endif %}
+					{% if meta.type == 'date'  %}
+						{% include 'one_filter_date.twig' with {'meta':meta, 'value':values[meta.id]}%}
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% endif %}
+	{% endfor %}
 
-						{% if meta.type == 'txt' %}
-							{% include 'one_filter_txt.twig' with {'meta':meta, 'value':values[meta.id]}%}
-						{% endif %}
-						{% if meta.type == 'int' or meta.type == 'float'  %}
-							{% include 'one_filter_num.twig' with {'meta':meta, 'value':values[meta.id]}%}
-						{% endif %}
-						{% if meta.type == 'date'  %}
-							{% include 'one_filter_date.twig' with {'meta':meta, 'value':values[meta.id]}%}
-						{% endif %}
-					{% endfor %}
-					</ul>
-				</div>
-			{% endif %}
-		{% endfor %}
-		<div class="text-center">
-			<input type="submit" class="mb-3 btn btn-primary" value="Set filters"/>
-		</div>
-	</form>
-	<form method="post">
-		<div class="text-center">
-			<input type="submit" class="mb-3 btn btn-primary" value="Reset all filters"/>
-		</div>
-	</form>
-	<br clear="both"/>&nbsp;<br/>
-</div>
+	<div class="text-center">
+		<input type="submit" class="mb-3 btn btn-primary" value="Set filters"/>
+	</div>
+</form>
+<form method="post">
+	<div class="text-center">
+		<input type="submit" class="mb-3 btn btn-primary" value="Reset all filters"/>
+	</div>
+</form>
 
