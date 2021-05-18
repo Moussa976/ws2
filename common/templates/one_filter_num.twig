@@ -1,16 +1,15 @@
 <div>
 	<div class="row align-items-center">
-		<div class="col_auto">
+		<div class="col-auto">
 			<label for="{{meta.id}}_0" class="form-label">{{ meta.label }}</label>
 		</div>
 		<div class="col-auto">
-			<input class="form-control" size="5" data-rule-number="true" type="text" name="value[{{meta.id}}][0]" value="{{value[0]}}" id="{{meta.id}}_0"/>
+			<input class="form-control" size="5" data-rule-number="true" type="text" name="value[{{meta.id}}][0]" value="{{value[0]}}" id="{{meta.id}}_0" placeholder="From"/>
 		</div>
+
+		<!--<label for="{{meta.id}}_1" class="form-label"> To </label>-->
 		<div class="col-auto">
-			<label for="{{meta.id}}_1" class="form-label"> To </label>
-		</div>
-		<div class="col-auto">
-			<input id="{{meta.id}}_1" class="form-control" size="5" autocomplete="off" type="text" name="value[{{meta.id}}][1]" data-rule-number="true" value="{{value[1]}}" />
+			<input id="{{meta.id}}_1" class="form-control" size="5" type="text" name="value[{{meta.id}}][1]" data-rule-number="true" value="{{value[1]}}" placeholder="To" />
 		</div>
 		<!-- <img class="action_icon" onclick="javascript:clear_elt('{{meta.id}}_1');" src="img/inactive.png"/> -->
 	</div>
