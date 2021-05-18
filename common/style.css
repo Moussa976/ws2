@@ -17,6 +17,16 @@ body{
 	
 }
 
+.red-button{
+	border: 2px solid #2ECC71;
+	border-radius: 30px;
+}
+
+.green-button{
+	border: 2px solid #E74C3C;
+	border-radius: 30px;
+}
+
 /****** TABLE ******/
 .rTable {
   	display: table;
