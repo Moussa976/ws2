@@ -9,9 +9,6 @@
 {% include 'record_table.twig' with {'data': data, 'metas':metas}%}
 <script type="text/javascript">
 	$("#edit_form").validate();
-</script>
-<script type="text/javascript">
-	$("#edit_form").validate();
 	function add_to_basket(rid){
 		$.ajax
 		    ({ 
@@ -46,6 +43,13 @@
 				dateFormat: "dd/mm/yy",
 			});
 	  } );
+
+	function lireAudio(record_id) {
+		$('.audiosRecord').each(function(){
+			$(this)[0].pause()
+		})
+		$('#audio'+record_id)[0].play()
+	}
 </script>
 
 {% include 'footer.twig' %}

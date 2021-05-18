@@ -113,10 +113,10 @@ audio::-webkit-media-controls-play-button,
   text-align: center !important;
 }
 
-.btn-play {
+.btn-round {
   border-radius: 50% !important;
-  height: 45px;
-  width: 45px;
+  height: 35px;
+  width: 35px;
 }
 
 /****** MENU *******/

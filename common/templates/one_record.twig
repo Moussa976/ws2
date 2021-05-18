@@ -1,10 +1,10 @@
 <tr>
-	<td>
-		<img id="b_{{data[0]["record_id"]}}_add" class="action_icon" onclick="javascript:add_to_basket({{data[0]["record_id"]}})" src="img/emprunter.png" {% if data[0]["in_basket"]%}style='display:none'{% endif %}/>
-		<img id="b_{{data[0]["record_id"]}}_rem" class="action_icon" onclick="javascript:rem_from_basket({{data[0]["record_id"]}})" src="img/inactive.png" {% if not data[0]["in_basket"]%}style='display:none'{% endif %}/>
-	</td>
-	{% for met in metas["record"] %}
-		<td>{{data[0][met["field_name"]]}}</td>
+	{% for key, met in metas["record"] %}
+		{% if key == 5 %}
+			<td>{{data[0][met["field_name"]]|date('Y-m-d H:i')}}</td>
+		{% else %}
+			<td>{{data[0][met["field_name"]]}}</td>
+		{% endif %}
 	{% endfor %}
 	{% for line in data %}
 		<td>{{line["sequence_order"]}}</td>
@@ -23,14 +23,24 @@
 			{% endfor %}
 		</td>
 	{% endfor %}
-	<td>
-		<button onclick="lireAudio('{{data[0]["filename"]}}')" type="button" class="btn btn-light btn-play">
-			<i class="fas fa-play"></i>
-		</button>
-		<!-- <audio controls preload="none">
-			<source src="./files/{{data[0]["filename"]}}" type="audio/wav">
-		Your browser does not support the audio element.
-		</audio> -->
+	<td style="background-color: #e6ffff !important;">
+		<div class="d-flex">
+			<button id="b_{{data[0]['record_id']}}_add" onclick="javascript:add_to_basket({{data[0]['record_id']}})" class="btn btn-outline-dark btn-round p-0 mx-1" type="button" {% if data[0]["in_basket"]%}style='display:none'{% endif %}>
+				<i class="fas fa-cart-plus"></i>
+			</button>
+			<button id="b_{{data[0]['record_id']}}_rem" onclick="javascript:rem_from_basket({{data[0]['record_id']}})" class="btn btn-outline-danger btn-round p-0 mx-1" type="button" {% if not data[0]["in_basket"]%}style='display:none'{% endif %}>
+				<i class="fas fa-times"></i>
+			</button>
+			<button  class="btn btn-outline-success btn-round p-0 mx-1 dropdown" onclick="javascript:lireAudio({{data[0]['record_id']}})" type="button" id='audioDropdown{{data[0]["record_id"]}}' data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+				<i class="fas fa-play"></i>
+			</button>
+			<div class="dropdown-menu p-2" aria-labelledby='audioDropdown{{data[0]["record_id"]}}'>
+				<audio class="audiosRecord" id='audio{{data[0]["record_id"]}}' controls preload="none">
+					<source src='./files/{{data[0]["filename"]}}' type="audio/wav">
+				Your browser does not support the audio element.
+				</audio>
+			</div>
+		</div>
 	</td>
 </tr>
 {# <div class="rTableCell">
