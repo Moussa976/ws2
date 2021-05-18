@@ -4,25 +4,29 @@ body{
 }
 
 /****** FILTERS *****/
-#edit_form{
-	background-color: #fff;
+
+#edit_form h1{
+	font-size: 20px;
 }
 
-#edit_form input.btn-validate{
-	border-radius:30px;
-	border : 2px solid #2ECC71;
-
-	font-family: 'Poppins', sans-serif;
-	font-size:18px;
-	
+#edit_form label{
+	font-size: 16px;
+	font-weight: bold;
 }
 
-.red-button{
+#edit_form input{
+	border-radius:5px;
+	padding: 10px;
+
+	font-family: 1§px;
+}
+
+.green-button{
 	border: 2px solid #2ECC71;
 	border-radius: 30px;
 }
 
-.green-button{
+.red-button{
 	border: 2px solid #E74C3C;
 	border-radius: 30px;
 }
