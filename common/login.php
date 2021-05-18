@@ -16,7 +16,6 @@ if($act == "login"){
 			header('Location: index.php');
 			exit();
 	}
-	
 }
 if($logout != -1){
 	session_destroy();
