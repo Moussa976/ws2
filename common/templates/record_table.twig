@@ -1,12 +1,12 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-xl-3 mb-2">
-			<div class="h-100 bg-light p-2">
+			<div class="bg-light p-2">
 				{% if not basket %}
-	{% include 'filter_table.twig' with {'values': values, 'metas':metas}%}
-{% else %}
-	<a href='download_basket.php' target='_blank'>Download Basket</a><br/>&nbsp;<br/>
-{% endif %}
+					{% include 'filter_table.twig' with {'values': values, 'metas':metas}%}
+				{% else %}
+					<a href='download_basket.php' target='_blank'>Download Basket</a><br/>&nbsp;<br/>
+				{% endif %}
 			</div>
 		</div>
 		<div class="col-xl-9">
@@ -34,40 +34,6 @@
 					</tbody>
 				</table>
 			</div>
-			<!-- Modal -->
-			<div class="modal fade" id="ModalAudio" tabindex="-1" aria-labelledby="ModalAudioLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<audio id="myAudio" controls preload="none">
-							<source id="src_audio" type="audio/wav">
-							Your browser does not support the
-							<code>audio</code> element.
-						</audio>
-					</div>
-				</div>
-			</div>
-
 		</div>
 	</div>
-</div> 
-{# <div class="rTable">
-	<div class="rTableHeading">
-		<div class="rTableHead">&nbsp;</div>
-		{% for data in metas["record"] %}
-			<div class="rTableHead"><span class="header">{{data["label"]}}</span></div>
-		{% endfor %}
-		<div class="rTableHead">&nbsp;</div>
-		{% for data in metas["production"] %}
-			<div class="rTableHead"><span class="header">{{data["label"]}}</span></div>
-		{% endfor %}
-		{% for data in metas["speaker"] %}
-			<div class="rTableHead"><span class="header">{{data["label"]}}</span></div>
-		{% endfor %}
-			<div class="rTableHead">&nbsp;</div>
-	</div>
-	{% for data in results %}
-	<div class="rTableRow {% if loop.index % 2 == 0%}even{% else %}odd{% endif %}" id="record{{ data["record_id"] }}">
-				{% include 'one_record.twig' with {'data': data, 'metas':metas} %}
-	</div>
-	{% endfor %}
-</div> #}
+</div>
