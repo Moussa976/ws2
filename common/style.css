@@ -97,22 +97,6 @@ audio::-webkit-media-controls-play-button,
   	display: table-row-group;
 }
 
-.pagecontroller {
-  border-radius: 50% !important;
-  height: 45px;
-  width: 45px;
-  border: none;
-  background-color: #719c88;
-}
-
-.pagecontroller:hover, .currentPage{
-  background-color: #198754;
-}
-
-#pagesControllers {
-  text-align: center !important;
-}
-
 .btn-round {
   border-radius: 50% !important;
   height: 35px;
@@ -144,4 +128,14 @@ audio::-webkit-media-controls-play-button,
 #menuNav img.img-fluid{
   width: 50%;
   height: auto;
+}
+
+/**** Sweet Alert 2 ****/
+.swal2-popup {
+	background: #fff !important;
+}
+
+.swal2-title,
+.swal2-content {
+	color: #332248 !important;
 }
