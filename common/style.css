@@ -4,44 +4,18 @@ body{
 }
 
 /****** FILTERS *****/
-/*.queryfilterglobal {
-	display: inline;
-}
-.queryfilter {
-	float: left;
-	margin-left: auto;
-	margin-right: 10px;
-	border-radius: 25px;
-	padding: 10px; 
-	width: auto;
-	height: auto;
-	background-color: var(--menu-bg-color);
-	color: var(--menu-text-color);
-	font-weight: normal;
-}
-.queryfilter input{
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 5px;
-}
-.queryfilter .label{
-	color: var(--menu-text-inverse-color);;
-	background-color: var(--menu-text-color);
-	border-radius: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: auto;
-    height: 20px;
-}
-.queryfilter .slider{
-	width: 300px;
+#edit_form{
+	background-color: #fff;
 }
 
-audio::-webkit-media-controls-play-button,
-     audio::-webkit-media-controls-panel {
-     background-color:var(--body-background-color);
-     color: var(--body-color);
-     }*/
+#edit_form input.btn-validate{
+	border-radius:30px;
+	border : 2px solid #2ECC71;
+
+	font-family: 'Poppins', sans-serif;
+	font-size:18px;
+	
+}
 
 /****** TABLE ******/
 .rTable {
@@ -107,28 +81,28 @@ audio::-webkit-media-controls-play-button,
 /****** MENU *******/
 #menuNav{
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
 }
+
+#menuNav li.nav-item{
+	padding: 5%;
+}
+
 #menuNav li a.nav-link{
   color: #000;
   font-size: 24px;
   text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-color: green;
 }
 
-#menuNav li:first-child a.nav-link{
-  text-decoration: underline;
-  text-decoration-color: red;
+#menuNav li a.nav-link:hover{
+	border-bottom: 3px solid #1ABC9C;
+	padding-bottom: 2px;
 }
 
-#menuNav li a.nav-link.dropdown-toggle{
-  text-decoration: underline;
-  text-decoration-color: yellow;
-}
+#menuNav li:last-child{
+	padding:0%;
+	margin-left: 0;
 
-#menuNav img.img-fluid{
-  width: 50%;
-  height: auto;
 }
 
 /**** Sweet Alert 2 ****/
