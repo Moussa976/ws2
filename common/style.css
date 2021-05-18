@@ -128,3 +128,9 @@ body{
 	height: 47px;
 	width: 47px;
 }
+/**** BTN LOGIN ****/
+.btn-login {
+	background: linear-gradient(0.25turn, #3A97D3, #35A3C1, #34ADA8, #34b29A, #34B298) !important;
+	color: #FFF !important;
+	border-radius: 30px;
+}
