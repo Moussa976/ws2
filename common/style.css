@@ -101,7 +101,8 @@ body{
 
 #menuNav li:last-child{
 	padding:0%;
-	text-align: right;
+	margin-left: 0;
+
 }
 
 /**** Sweet Alert 2 ****/
