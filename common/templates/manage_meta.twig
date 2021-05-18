@@ -1,7 +1,7 @@
 {% include 'header.twig' %}
 
-<div>
-	<h1>Gestion de la base - table {{table}}</h1>
+<div class="container">
+	<h1 class="text-center">Gestion de la base - table {{table}}</h1>
 	
 	Champs obligatoires
 	<ul>
@@ -9,14 +9,39 @@
 			<li>{{ data }}</li>
 		{% endfor %}
 	</ul>
+
 	
-	Champs optionels
-	<div class="rTable">
+	<div class="row">
+		<div class="col-auto me-auto">
+			Champs optionels
+		</div>
+		<div class="col-auto">
+			<a class="btn btn-login" href="edit_meta.php?metaid=-1&table={{table}}"> <i class="fas fa-plus"></i> Ajouter un nouveau champ optionel</a>
+		</div>
+	</div>
+	<div class="table-responsive">
+		<table class="table table-striped table-hover tablemanager">
+			<thead>
+				<tr>
+					<th scope="col">Nom (unique)</th>
+					<th scope="col">Type</th>
+					<th scope="col">Description</th>
+					<th scope="col">Actif</th>
+					<th scope="col"></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for data in meta %}
+					{% include 'one_meta.twig' with {'data': data} %}
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	{#<div class="rTable">
 		<div class="rTableHeading">
 			<div class="rTableHead"></div>
 			<div class="rTableHead"><span class="header">Nom (unique)</span></div>
 			<div class="rTableHead"><span class="header">Type</span></div>
-			
 			<div class="rTableHead"><span class="header">Description</span></div>
 			<div class="rTableHead"><span class="header">Actif</span></div>
 		</div>
@@ -25,8 +50,7 @@
 			{% include 'one_meta.twig' with {'data': data} %}
 		</div>
 		{% endfor %}
-	</div>
-	<a href="edit_meta.php?metaid=-1&table={{table}}">Ajouter un nouveau champ optionel</a>
+	</div>#}
 </div>
 
 {% include 'footer.twig' %}
