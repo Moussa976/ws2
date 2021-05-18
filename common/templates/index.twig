@@ -19,7 +19,7 @@
 		        {
 		            $('#b_'+rid+'_add').hide();
 					$('#b_'+rid+'_rem').show();
-					massageAlert("success", "test fj nf  f nkf jdf jodlf kdf jl")
+					messageAlert("success", "test fj nf  f nkf jdf jodlf kdf jl")
 		        }
 		    });
 	}
@@ -33,7 +33,7 @@
 		        {
 		            $('#b_'+rid+'_rem').hide();
 					$('#b_'+rid+'_add').show();
-					massageAlert("success", "test")
+					messageAlert("success", "test")
 		        }
 		    });
 	}
@@ -45,31 +45,6 @@
 				dateFormat: "dd/mm/yy",
 			});
 	  } );
-
-	function lireAudio(record_id) {
-		$('.audiosRecord').each(function(){
-			$(this)[0].pause()
-		})
-		$('#audio'+record_id)[0].play()
-	}
-
-	function massageAlert(typealerte, message) {
-		const Toast = Swal.mixin({
-			toast: true,
-			position: 'top',
-			showConfirmButton: false,
-			timer: 3000,
-			timerProgressBar: true,
-			didOpen: (toast) => {
-				toast.addEventListener('mouseenter', Swal.stopTimer)
-				toast.addEventListener('mouseleave', Swal.resumeTimer)
-			}
-		})
-		Toast.fire({
-			icon: typealerte,
-			title: message
-		})
-	}
 </script>
 
 {% include 'footer.twig' %}

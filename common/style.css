@@ -139,3 +139,18 @@ audio::-webkit-media-controls-play-button,
 .swal2-content {
 	color: #332248 !important;
 }
+
+/**** Arrow-up ****/
+#btnScrollTop {
+	position: fixed;
+	bottom: 20px;
+	right: 130px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+}
