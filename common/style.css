@@ -98,6 +98,7 @@ audio::-webkit-media-controls-play-button,
 }
 
 .btn-round {
+  background-color: transparent;
   border-radius: 50% !important;
   height: 35px;
   width: 35px;
@@ -146,11 +147,10 @@ audio::-webkit-media-controls-play-button,
 	bottom: 20px;
 	right: 130px;
 	z-index: 99;
-	font-size: 18px;
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
 	border-radius: 50%;
-	height: 50px;
-	width: 50px;
+	height: 47px;
+	width: 47px;
 }
