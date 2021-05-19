@@ -40,9 +40,19 @@ html, body
 	border-radius: 30px;
 }
 
+.green-button:hover{
+	background-color: #2ECC71;
+	color: white;
+}
+
 .red-button{
 	border: 2px solid #E74C3C;
 	border-radius: 30px;
+}
+
+.red-button:hover{
+	background-color: #E74C3C;
+	color: white;
 }
 
 /****** TABLE ******/
