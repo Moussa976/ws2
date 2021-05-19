@@ -108,6 +108,10 @@ body{
 	border-bottom: 3px solid #1ABC9C;
 	padding-bottom: 2px;
 }
+/****** SUB-MENU *******/
+#myTab{
+	background-color: rgba(255, 255, 255, 0.8);
+}
 
 
 /**** Sweet Alert 2 ****/
@@ -143,5 +147,12 @@ body{
 
 /**** Text Download ****/
 .text-download {
-	color: #1abc9c;
+	color: #000;
+	text-decoration: underline;
+	text-decoration-color: #1ABC9C;
+}
+
+.text-download:hover{
+	text-decoration: none;
+	color: #1ABC9C;
 }
