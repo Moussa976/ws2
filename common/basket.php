@@ -43,5 +43,5 @@ while($row = $res->fetch_assoc()){
 	$data[$row["record_id"]][] = $row;
 }
 
-echo $twig->render('index.twig', array("metas"=>$metas, "values"=>$values, "results"=>$data, "basket"=>true));
+echo $twig->render('index.twig', array("metas"=>$metas, "values"=>$values, "results"=>$data, "basket"=>true, "menu_basket"=>true));
 ?>

@@ -36,14 +36,13 @@
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-
 						<div class="collapse navbar-collapse border-lg-0" id="navbarSupportedContent">
 							<div class="d-grid d-lg-block gap-2 mx-auto py-lg-2">
-								<a class="nav-list mx-4 text-center d-none d-lg-inline" href="./">Home</a>
-								<a class="nav-list mx-4 text-center" href="basket.php">Basket</a>
-								<a class="nav-list mx-4 text-center" href="about.php">About</a>
+								<a class="nav-list mx-4 text-center {% if menu_home is defined %}active{% endif %} d-none d-lg-inline" href="./">Home</a>
+								<a class="nav-list mx-4 text-center {% if menu_basket is defined %}active{% endif %}" href="basket.php">Basket</a>
+								<a class="nav-list mx-4 text-center {% if menu_about is defined %}active{% endif %}" href="about.php">About</a>
 								{% if user_id != -1 %}
-									<a class="nav-list mx-4 text-center" href="manage_meta.php?table=record">Database Management</a>
+									<a class="nav-list mx-4 text-center {% if menu_manage_meta is defined %}active{% endif %}" href="manage_meta.php?table=record">Database Management</a>
 									<a class="nav-list mx-4 text-center" href="edit.php">Add element</a>
 									<a class="nav-list mx-4 text-center d-block d-lg-none" href='login.php?logout=1'>Logout</a>
 								{% else %}

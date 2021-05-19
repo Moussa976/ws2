@@ -6,5 +6,5 @@ require_once("./common/init.php");
 
 $pid = (isset($_GET["pid"])?intval($_GET["pid"]):1);
 
-echo $twig->render('about.twig', array("pid"=>$pid));
+echo $twig->render('about.twig', array("pid"=>$pid, "menu_about"=>true));
 ?>
