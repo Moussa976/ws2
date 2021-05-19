@@ -1,8 +1,8 @@
 <div class="container-fluid p-0">
 	<div class="row m-0">
 		<div class="col-xl-3 mb-2 pe-4 position-fixed">
-			<div class="p-2">
-				<div class="d-none d-xl-block">
+			<div class="p-2 bg-light" id="scroll-form-filter">
+				<div class="d-none d-xl-block" >
 					{% if not basket %}
 						{% include 'filter_table.twig' with {'values': values, 'metas':metas}%}
 					{% else %}
@@ -11,7 +11,7 @@
 						</p>
 					{% endif %}
 				</div>
-				<div class="d-block d-xl-none">
+				{# <div class="d-block d-xl-none">
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
 						Filters
@@ -38,7 +38,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> #}
 			</div>
 		</div>
 		<div class="offset-3 col-xl-9">

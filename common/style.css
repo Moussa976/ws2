@@ -192,3 +192,15 @@ img.img_nav{
 	text-decoration: none;
 	color: var(--main-color);
 }
+
+#scroll-form-filter {
+	height: auto;
+}
+
+@media (max-height: 870px) {
+	#scroll-form-filter {
+		height: 500px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+}
