@@ -17,7 +17,7 @@ html, body
 #main-content
 {
 	min-height: 100%;
-	padding-top: 120px;
+	padding-top: 4.5%;
 	padding-bottom: 120px;
 	margin-bottom:-123px;
 }
@@ -31,6 +31,10 @@ html, body
 
 #edit_form h1{
 	font-size: 20px;
+}
+
+form h1.mt-4:first-child{
+	margin-top: 0px;
 }
 
 #edit_form label{
