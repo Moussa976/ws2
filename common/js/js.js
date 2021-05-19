@@ -23,3 +23,9 @@ function messageAlert(typealerte, message) {
         title: message
     })
 }
+$(function(){
+    $("#filtrer").click(function(){
+        $('#edit_form').submit()
+        console.log("cc")
+    })
+})
