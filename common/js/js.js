@@ -28,3 +28,26 @@ $(function(){
         $('#edit_form').submit()
     })
 })
+
+//Get the button
+var mybutton = $("#btnScrollTop");
+// When the user scrolls down 150px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+function scrollFunction() {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        if (!mybutton.hasClass('d-block')) {
+            if (mybutton.hasClass('d-none')) {mybutton.removeClass('d-none') }
+            mybutton.addClass('d-block')
+        }
+    } else {
+        if (!mybutton.hasClass('d-none')) {
+            if (mybutton.hasClass('d-block')) { mybutton.removeClass('d-block') }
+            mybutton.addClass('d-none')
+        }
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
