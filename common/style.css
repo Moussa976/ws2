@@ -6,6 +6,14 @@ html, body
   font-size: 18px;
 }
 
+.nav-link{
+	color: #1ABC9C;
+}
+
+.nav-link:hover{
+	color: #7BCBBB;
+}
+
 #main-content
 {
 	min-height: 100%;
@@ -192,7 +200,7 @@ img.img_nav{
 	text-decoration: none;
 	color: var(--main-color);
 }
-
+/* Scroll Filter */
 #scroll-form-filter {
 	height: auto;
 }
@@ -202,5 +210,11 @@ img.img_nav{
 		height: 500px;
 		overflow-y: auto;
 		overflow-x: hidden;
+	}
+}
+/**** About ****/
+@media (min-width: 1200px){
+	.about-position{
+		position: fixed;
 	}
 }
