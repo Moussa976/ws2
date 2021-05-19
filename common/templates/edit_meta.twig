@@ -1,8 +1,9 @@
-{% include 'header.twig' %}
+{% extends 'header.twig' %}
 
+{% block body %}
 <div>
 	<h1>Edition d'un champ optionel</h1>
-	
+
 	<form id="edit_form" method="post">
 	<input type="hidden" name="act" value="save">
 	<div class="rTable">
@@ -63,5 +64,4 @@
 	</div>
 	</form>
 </div>
-
-{% include 'footer.twig' %}
+{% endblock %}

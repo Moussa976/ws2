@@ -44,23 +44,7 @@
 								<a class="nav-list mx-4 text-center" href="basket.php">Basket</a>
 								<a class="nav-list mx-4 text-center" href="about.php">About</a>
 								{% if user_id != -1 %}
-									<a class="nav-list mx-4 text-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										Database Management
-									</a>
-									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<li>
-											<a class="dropdown-item" href="manage_meta.php?table=record">Records</a>
-										</li>
-										<li>
-											<a class="dropdown-item" href="manage_meta.php?table=production">Productions</a>
-										</li>
-										<li>
-											<a class="dropdown-item" href="manage_meta.php?table=speaker">Speakers</a>
-										</li>
-										<li>
-											<a class="dropdown-item" href="remake_db.php">Recalculate database</a>
-										</li>
-									</ul>
+									<a class="nav-list mx-4 text-center" href="manage_meta.php?table=record">Database Management</a>
 									<a class="nav-list mx-4 text-center" href="edit.php">Add element</a>
 									<a class="nav-list mx-4 text-center d-block d-lg-none" href='login.php?logout=1'>Logout</a>
 								{% else %}
