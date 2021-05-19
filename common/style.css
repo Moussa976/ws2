@@ -98,25 +98,18 @@ body{
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-#menuNav li.nav-item{
-	padding: 5%;
-}
-
-#menuNav li a.nav-link{
+#menuNav a.nav-list{
   color: #000;
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
-#menuNav li a.nav-link:hover{
+#menuNav a.nav-list:hover, #menuNav a.nav-list.active{
 	border-bottom: 3px solid #1ABC9C;
 	padding-bottom: 2px;
 }
 
-#menuNav li:last-child{
-	padding:0%;
-	text-align: right;
-}
 
 /**** Sweet Alert 2 ****/
 .swal2-popup {
@@ -126,6 +119,7 @@ body{
 .swal2-title,
 .swal2-content {
 	color: #332248 !important;
+	display: flex !important;
 }
 
 /**** Arrow-up ****/
