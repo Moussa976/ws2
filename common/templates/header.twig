@@ -54,13 +54,13 @@
 										{% if user_id != -1 %}
 											<li class="nav-item d-none d-lg-block">
 												<a class="nav-link  text-center" href='login.php?logout=1'>
-													<i class="fas fa-sign-out-alt"></i>
+													<img class="img_nav" src="img/logout.png" alt="Boutone permettant de se déconnecter" title="Se déconnecter">
 												</a>
 											</li>
 										{% else %}
 											<li class="nav-item">
 												<a href="#" class="dropdown nav-link  text-center" data-bs-toggle="dropdown" aria-expanded="false">
-													<img src="img/login.png" alt="Login" style="height: 45px; width:auto;">
+													<img class="img_nav" src="img/login.png" alt="Bouton permettant de se connecter" title="Se connecter" style="">
 												</a>
 												<div class="dropdown-menu dropdown-menu-end me-3 position-absolute">
 													<form class="px-4 py-3" method="POST" action="login.php">
