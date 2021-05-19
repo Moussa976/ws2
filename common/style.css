@@ -117,13 +117,12 @@ body{
 
 /**** Sweet Alert 2 ****/
 .swal2-popup {
-	background: #fff;
+	background: #fff !important;
 }
 
 .swal2-title,
 .swal2-content {
-	color: #332248;
-	display: flex;
+	color: #1ABC9C;
 }
 
 /**** Arrow-up ****/
