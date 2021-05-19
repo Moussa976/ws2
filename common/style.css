@@ -192,3 +192,10 @@ img.img_nav{
 	text-decoration: none;
 	color: var(--main-color);
 }
+
+/**** About ****/
+@media (min-width: 1200px){
+	.about-position{
+		position: fixed;
+	}
+}
