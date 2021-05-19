@@ -1,4 +1,4 @@
-body
+html, body
 {
   height: 100%;
   margin: 0;
@@ -6,19 +6,17 @@ body
   font-size: 18px;
 }
 
-html {
-	height: 100%;
-}
-
-.content
+#main-content
 {
 	min-height: 100%;
-	margin: 0 auto -60px;
+	padding-top: 120px;
+	padding-bottom: 120px;
+	margin-bottom:-123px;
 }
 
 .footer
 {
-	height: 60px;
+	height: 123px;
 }
 
 /****** FILTERS *****/
