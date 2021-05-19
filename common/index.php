@@ -113,5 +113,5 @@ while($row = $res->fetch_assoc()){
 
 //var_dump($data);
 
-echo $twig->render('index.twig', array("metas"=>$metas, "values"=>$values, "results"=>$data, "basket"=>false));
+echo $twig->render('index.twig', array("metas"=>$metas, "values"=>$values, "results"=>$data, "basket"=>false, "menu_home"=>true));
 ?>

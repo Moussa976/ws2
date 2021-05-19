@@ -1,13 +1,10 @@
 :root {
-  --body-color: #800000;
-  --body-background-color: #FFEFD5;
+
+  /********* BODY COLORS **************/
+
+  --main-color:#1ABC9C;
   
-  --menu-text-color: #ffffff;
-  --menu-text-inverse-color: #000000;
-  --menu-bg-color: #556B2F;
-  --menu-bg-hover-color: #4cb6ea;
-  --menu-open-border-top-color : rgba(110, 110, 110, 0.25);
-  
+  /********* TABLE COLOR **************/
   --table-odd-background-color: #58781c;
   --table-odd-color: #ffffff;
   --table-even-background-color: #709c25;

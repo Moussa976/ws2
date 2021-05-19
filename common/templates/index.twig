@@ -1,7 +1,7 @@
-{% include 'header.twig' %}
+{% extends 'header.twig' %}
 
-{% include 'record_table.twig' with {'data': data, 'metas':metas}%}
-
+{% block body %}{% include 'record_table.twig' with {'data': data, 'metas':metas}%}{% endblock %}
+{% block javascripts %}
 <script type="text/javascript">
 	$("#edit_form").validate();
 	function add_to_basket(rid){
@@ -41,6 +41,6 @@
 			});
 	  } );
 </script>
-
 	{% include 'footer.twig' %}
 
+{% endblock %}

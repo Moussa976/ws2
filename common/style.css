@@ -104,9 +104,15 @@ body{
   text-decoration: none;
 }
 
-#menuNav a.nav-list:hover, #menuNav a.nav-list.active{
-	border-bottom: 3px solid #1ABC9C;
+#menuNav a.nav-list:hover, 
+#menuNav a.nav-list.active{
+	border-bottom: 3px solid;
+	border-color: var(--main-color);
 	padding-bottom: 2px;
+}
+/****** SUB-MENU *******/
+#myTab{
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
 /**** Footer ****/
@@ -118,13 +124,12 @@ body{
 
 /**** Sweet Alert 2 ****/
 .swal2-popup {
-	background: #fff;
+	background: #fff !important;
 }
 
 .swal2-title,
 .swal2-content {
-	color: #332248;
-	display: flex;
+	color: var(--main-color);
 }
 
 /**** Arrow-up ****/
@@ -149,5 +154,12 @@ body{
 
 /**** Text Download ****/
 .text-download {
-	color: #1abc9c;
+	color: #000;
+	text-decoration: underline;
+	text-decoration-color: var(--main-color);
+}
+
+.text-download:hover{
+	text-decoration: none;
+	color: var(--main-color);
 }

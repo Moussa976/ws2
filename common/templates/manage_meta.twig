@@ -1,16 +1,24 @@
-{% include 'header.twig' %}
+{% extends 'header.twig' %}
+{% block submenus %}
+<nav>
+	<div class="nav nav-tabs row mx-0 text-center" id="nav-tab" role="tablist">
+		<a class="col nav-link {% if table == 'record' %}active{% endif %}" href="manage_meta.php?table=record" id="nav-record-tab" data-bs-target="#nav-record" role="button" role="tab" aria-controls="nav-record" aria-selected="true">Records</a>
+		<a class="col nav-link {% if table == 'production' %}active{% endif %}" href="manage_meta.php?table=production" id="nav-production-tab" data-bs-target="#nav-production" role="button" role="tab" aria-controls="nav-production" aria-selected="false">Productions</a>
+		<a class="col nav-link {% if table == 'speaker' %}active{% endif %}" href="manage_meta.php?table=speaker" id="nav-speaker-tab" data-bs-target="#nav-speaker" role="button" role="tab" aria-controls="nav-speaker" aria-selected="false">Speakers</a>
+		<a class="col nav-link {% if table != 'record' and table != 'production' and table != 'speaker' %}active{% endif %}" href="remake_db.php" id="nav-remake-tab" data-bs-target="#nav-remake" role="button" role="tab" aria-controls="nav-remake" aria-selected="false">Recalculate database</a>
+	</div>
+</nav>
+{% endblock %}
 
+{% block body %}
 <div class="container">
 	<h1 class="text-center">Gestion de la base - table {{table}}</h1>
-	
 	Champs obligatoires
 	<ul>
 		{% for data in required %}
 			<li>{{ data }}</li>
 		{% endfor %}
 	</ul>
-
-	
 	<div class="row">
 		<div class="col-auto me-auto">
 			Champs optionels
@@ -20,7 +28,7 @@
 		</div>
 	</div>
 	<div class="table-responsive">
-		<table class="table table-striped table-hover tablemanager">
+		<table class="table table-striped table-hover  ">
 			<thead>
 				<tr>
 					<th scope="col">Nom (unique)</th>
@@ -37,20 +45,5 @@
 			</tbody>
 		</table>
 	</div>
-	{#<div class="rTable">
-		<div class="rTableHeading">
-			<div class="rTableHead"></div>
-			<div class="rTableHead"><span class="header">Nom (unique)</span></div>
-			<div class="rTableHead"><span class="header">Type</span></div>
-			<div class="rTableHead"><span class="header">Description</span></div>
-			<div class="rTableHead"><span class="header">Actif</span></div>
-		</div>
-		{% for data in meta %}
-		<div class="rTableRow {% if loop.index % 2 == 0%}even{% else %}odd{% endif %}" id="eq{{ data["id"] }}">
-			{% include 'one_meta.twig' with {'data': data} %}
-		</div>
-		{% endfor %}
-	</div>#}
 </div>
-
-{% include 'footer.twig' %}
+{% endblock %}

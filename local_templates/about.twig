@@ -1,12 +1,15 @@
-{% include 'header.twig' %}
-
-<nav class="mb-4">
-    <div class="nav nav-tabs row text-center m-0" id="nav-tab" role="tablist">
-        <a href='about.php?pid=1' class="nav-link col {% if pid == 1 %}active{% endif %}" id="nav-pid1-tab"  type="button" role="tab" aria-controls="nav-pid1" aria-selected="true">MURIQUIS’ VOCAL COMMUNICATION</a>
-        <a href='about.php?pid=2' class="nav-link col {% if pid == 2 %}active{% endif %}" id="nav-pid2-tab"  type="button" role="tab" aria-controls="nav-pid2" aria-selected="false">DESCRIPTION OF DATA AND TABLE</a>
-    </div>
-</nav>
-
+{% extends 'header.twig' %}
+{% block submenus %}
+<ul class='nav nav-tabs d-flex mb-4 mx-0' id='myTab' role='tablist'>
+    <li class='nav-item col text-center' role='presentation'>
+        <a href='about.php?pid=1' class='nav-link {% if pid == 1 %}active{% endif %}' id='nav-pid1-tab'  type='button' role='tab' aria-controls='nav-pid1' aria-selected='true'>MURIQUIS’ VOCAL COMMUNICATION</a>
+    </li>
+    <li class='nav-item col text-center' role='presentation'>
+        <a href='about.php?pid=2' class='nav-link col {% if pid == 2 %}active{% endif %}' id='nav-pid2-tab'  type='button' role='tab' aria-controls='nav-pid2' aria-selected='false'>DESCRIPTION OF DATA AND TABLE</a>
+    </li>
+</ul>
+{% endblock %}
+{% block body %}
 {% if pid == 1 %}
 <div id="about-img" class="container">
     <div class="row">
@@ -37,7 +40,7 @@
 
 {% if pid == 2 %}
 <div class="container">
-    <div class="row">
+    <div class="row mx-0">
         <h1> DESCRIPTION OF DATA AND TABLE </h1>
         <div class="col-xl-4 order-xl-2">
             <img  class="img-fluid" src="img/Diego.jpg"/>
@@ -113,5 +116,4 @@
     </div>
 </div>
 {% endif %}
-
-{% include 'footer.twig' %}
+{% endblock %}

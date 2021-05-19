@@ -1,67 +1,63 @@
-{% include 'header.twig' %}
+{% extends 'header.twig' %}
 
-<div>
-	<h1>Edition d'un champ optionel</h1>
-	
-	<form id="edit_form" method="post">
-	<input type="hidden" name="act" value="save">
-	<div class="rTable">
-		<div class="rTableRow">
-			<div class="rTableHeadCell"></div>
-			<div class="rTableCell">{% if meta["id"] %}#{{meta["id"]}}{% endif %}</div>
-		</div>
-	</div>
-	<div class="rTable">
-		<div class="rTableRow">
-			<div class="rTableHeadCell">Pour la table</div>
-			<div class="rTableCell">{{meta["table_name"]}}</div>
-		</div>
-	</div>
-	<div class="rTable">
-		<div class="rTableRow">
-			<div class="rTableHeadCell">Nom du champ</div>
-			<div class="rTableCell"><input name='field_name' value='{{meta["field_name"]}}'/></div>
-		</div>
-	</div>
-	<div class="rTable">
-		<div class="rTableRow">
-			<div class="rTableHeadCell">Type du champ</div>
-			<div class="rTableCell">
-			{% if meta["id"] == -1 %}
-				<select name="type">
-					{% for t in types %}
-						<option value="{{t}}"{% if t == meta["type"] %} selected{% endif %}>{{t}}</option>
-					{% endfor %}
-				</select>
-			{% else %}
-				{{meta["type"]}}
-			{% endif %}
+{% block body %}
+	<div class="container">
+		<h1 class="text-center mb-5">Edition d'un champ optionel</h1>
+		<form id="edit_form" method="post">
+			<input type="hidden" name="act" value="save">
+			<div class="table-responsive">
+				<table class="table table-striped table-hover table-bordered">
+					<tbody>
+						<tr>
+							<th scope="row"></th>
+							<td>
+								{% if meta["id"] %}#{{meta["id"]}}
+								{% endif %}
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">Pour la table</th>
+							<td>{{meta["table_name"]}}</td>
+						</tr>
+						<tr>
+							<th scope="row">Nom du champ</th>
+							<td><input name='field_name' value='{{meta["field_name"]}}'/></td>
+						</tr>
+						<tr>
+							<th scope="row">Type du champ</th>
+							<td>
+								{% if meta["id"] == -1 %}
+									<select name="type">
+										{% for t in types %}
+											<option value="{{t}}" {% if t == meta["type"] %} selected {% endif %}>{{t}}</option>
+										{% endfor %}
+									</select>
+								{% else %}
+									{{meta["type"]}}
+								{% endif %}
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">Intitulé du champ (pour la recherche)</th>
+							<td><input name='label' value='{{meta["label"]}}'/></td>
+						</tr>
+						<tr>
+							<th scope="row">Champ actif ?</th>
+							<td>
+								<select name="active">
+									<option value="1" {% if '1' == meta["active"] %} selected {% endif %}>Oui</option>
+									<option value="0" {% if '0' == meta["active"] %} selected {% endif %}>Non</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
-		</div>
-	</div>
-	<div class="rTable">
-		<div class="rTableRow">
-			<div class="rTableHeadCell">Intitulé du champ (pour la recherche)</div>
-			<div class="rTableCell"><input name='label' value='{{meta["label"]}}'/></div>
-		</div>
-	</div>
-	<div class="rTable">
-		<div class="rTableRow">
-			<div class="rTableHeadCell">Champ actif ?</div>
-			<div class="rTableCell">
-				<select name="active">
-					<option value="1" {% if '1' == meta["active"] %} selected{% endif %}>Oui</option>
-					<option value="0" {% if '0' == meta["active"] %} selected{% endif %}>Non</option>
-				</select>
+			<div class="row justify-content-center">
+				<div class="col-sm-7 text-center col-md-4">
+					<input class="btn btn-login" type="submit"/>
+				</div>
 			</div>
-		</div>
+		</form>
 	</div>
-	<div class="rTableRow">
-		<div class="rTableCell">
-			<input type="submit"/>
-		</div>
-	</div>
-	</form>
-</div>
-
-{% include 'footer.twig' %}
+{% endblock %}

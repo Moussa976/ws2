@@ -26,6 +26,5 @@ function messageAlert(typealerte, message) {
 $(function(){
     $("#filtrer").click(function(){
         $('#edit_form').submit()
-        console.log("cc")
     })
 })

@@ -29,14 +29,13 @@ if ($act == "save"){
 			$meta["type"] = $_POST["type"];
 			$meta["label"] = $_POST["label"];
 			$meta["active"] = $_POST["active"];
-		}else{			
+		}else{
 			$SQL = "INSERT INTO `meta`(`table_name`, `field_name`, `type`, `label`, `active`) ";
 			$SQL .= "VALUES ('".$table_name."', '".$_POST["field_name"]."','".$_POST["type"]."', '".$_POST["label"]."', ".intval($_POST["active"])." )";
 			$meta_id = $dbh->executeInsertQueryAutoincrement($SQL);
-			
+
 			header("location: manage_meta.php?table=".$table_name);
 			exit();
-			
 		}
 	}else{
 		$SQL = "UPDATE meta SET label = '".$_POST["label"]."', field_name = '".$_POST["field_name"]."', active = ".intval($_POST["active"])." WHERE id = ".$meta_id;
