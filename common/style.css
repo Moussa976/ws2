@@ -87,14 +87,13 @@ body{
 
 .btn-round {
   background-color: transparent;
-  border-radius: 50% !important;
+  border-radius: 50%;
   height: 35px;
   width: 35px;
 }
 
 /****** MENU *******/
 #menuNav{
-  justify-content: center;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -113,13 +112,13 @@ body{
 
 /**** Sweet Alert 2 ****/
 .swal2-popup {
-	background: #fff !important;
+	background: #fff;
 }
 
 .swal2-title,
 .swal2-content {
-	color: #332248 !important;
-	display: flex !important;
+	color: #332248;
+	display: flex;
 }
 
 /**** Arrow-up ****/
@@ -137,12 +136,12 @@ body{
 }
 /**** BTN LOGIN ****/
 .btn-login {
-	background: linear-gradient(0.25turn, #3A97D3, #35A3C1, #34ADA8, #34b29A, #34B298) !important;
-	color: #FFF !important;
+	background: linear-gradient(0.25turn, #3A97D3, #35A3C1, #34ADA8, #34b29A, #34B298);
+	color: #FFF;
 	border-radius: 30px;
 }
 
 /**** Text Download ****/
 .text-download {
-	color: #1abc9c !important;
+	color: #1abc9c;
 }
