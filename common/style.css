@@ -32,7 +32,7 @@ html, body
 
 #edit_form input{
 	border-radius:5px;
-	font-family: 14px;
+	font-size: 16px;
 }
 
 .green-button{

@@ -26,76 +26,76 @@
 
 	</head>
 	<body>
-			<section class="fixed-top">
-				<nav class="navbar navbar-expand-lg navbar-light" id="menuNav">
-					<div class="container-fluid">
-						<a class="navbar-brand d-block d-lg-none" href="#">
-							<i class="fas fa-home"></i>
-							HOME</a>&nbsp;
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-							<div class="collapse navbar-collapse border-lg-0" id="navbarSupportedContent">
-								<div class="d-grid d-lg-block gap-2 mx-auto py-lg-2">
-									<a class="nav-list mx-4 text-center {% if menu_home is defined %}active{% endif %} d-none d-lg-inline" href="./">Home</a>
-									<a class="nav-list mx-4 text-center {% if menu_basket is defined %}active{% endif %}" href="basket.php">Basket</a>
-									<a class="nav-list mx-4 text-center {% if menu_about is defined %}active{% endif %}" href="about.php">About</a>
-									{% if user_id != -1 %}
-										<a class="nav-list mx-4 text-center {% if menu_manage_meta is defined %}active{% endif %}" href="manage_meta.php?table=record">Database Management</a>
-										<a class="nav-list mx-4 text-center" href="edit.php">Add element</a>
-										<a class="nav-list mx-4 text-center d-block d-lg-none" href='login.php?logout=1'>Logout</a>
-									{% else %}
-										<a class="nav-list mx-4 text-center d-block d-lg-none" href="login.php">Login</a>
-									{% endif %}
-								</div>
-								<div class="d-flex justify-content-around justify-content-lg-start">
-									<div class="d-none d-lg-inline">
-										<ul class="navbar-nav">
-											{% if user_id != -1 %}
-												<li class="nav-item d-none d-lg-block">
-													<a class="nav-link  text-center" href='login.php?logout=1'>
-														<img class="img_nav" src="img/logout.png" alt="Boutone permettant de se déconnecter" title="Se déconnecter">
-													</a>
-												</li>
-											{% else %}
-												<li class="nav-item">
-													<a href="#" class="dropdown nav-link  text-center" data-bs-toggle="dropdown" aria-expanded="false">
-														<img class="img_nav" src="img/login.png" alt="Bouton permettant de se connecter" title="Se connecter" style="">
-													</a>
-													<div class="dropdown-menu dropdown-menu-end me-3 position-absolute">
-														<form class="px-4 py-3" method="POST" action="login.php">
-															<input type="hidden" name="act" value="login"/>
-															<div class="form-floating mb-3">
-																<input type="text" name="login" placeholder="Login" id="inputLogin" class="form-control" required autofocus>
-																<label for="inputLogin">Login</label>
-															</div>
-															<div class="form-floating mb-3">
-																<input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Password" required>
-																<label for="inputPassword">Password</label>
-															</div>
-															<div class="text-center mb-2">
-																<button class="btn btn-login" type="submit">Submit</button>
-															</div>
-														</form>
-													</div>
-												</li>
-											{% endif %}
-										</ul>
-									</div>
+		<section class="fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-light" id="menuNav">
+				<div class="container-fluid">
+					<a class="navbar-brand d-block d-lg-none" href="#">
+						<i class="fas fa-home"></i>
+						HOME</a>&nbsp;
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+						<div class="collapse navbar-collapse border-lg-0" id="navbarSupportedContent">
+							<div class="d-grid d-lg-block gap-2 mx-auto py-lg-2">
+								<a class="nav-list mx-4 text-center {% if menu_home is defined %}active{% endif %} d-none d-lg-inline" href="./">Home</a>
+								<a class="nav-list mx-4 text-center {% if menu_basket is defined %}active{% endif %}" href="basket.php">Basket</a>
+								<a class="nav-list mx-4 text-center {% if menu_about is defined %}active{% endif %}" href="about.php">About</a>
+								{% if user_id != -1 %}
+									<a class="nav-list mx-4 text-center {% if menu_manage_meta is defined %}active{% endif %}" href="manage_meta.php?table=record">Database Management</a>
+									<a class="nav-list mx-4 text-center" href="edit.php">Add element</a>
+									<a class="nav-list mx-4 text-center d-block d-lg-none" href='login.php?logout=1'>Logout</a>
+								{% else %}
+									<a class="nav-list mx-4 text-center d-block d-lg-none" href="login.php">Login</a>
+								{% endif %}
+							</div>
+							<div class="d-flex justify-content-around justify-content-lg-start">
+								<div class="d-none d-lg-inline">
+									<ul class="navbar-nav">
+										{% if user_id != -1 %}
+											<li class="nav-item d-none d-lg-block">
+												<a class="nav-link  text-center" href='login.php?logout=1'>
+													<img class="img_nav" src="img/logout.png" alt="Boutone permettant de se déconnecter" title="Se déconnecter">
+												</a>
+											</li>
+										{% else %}
+											<li class="nav-item">
+												<a href="#" class="dropdown nav-link  text-center" data-bs-toggle="dropdown" aria-expanded="false">
+													<img class="img_nav" src="img/login.png" alt="Bouton permettant de se connecter" title="Se connecter" style="">
+												</a>
+												<div class="dropdown-menu dropdown-menu-end me-3 position-absolute">
+													<form class="px-4 py-3" method="POST" action="login.php">
+														<input type="hidden" name="act" value="login"/>
+														<div class="form-floating mb-3">
+															<input type="text" name="login" placeholder="Login" id="inputLogin" class="form-control" required autofocus>
+															<label for="inputLogin">Login</label>
+														</div>
+														<div class="form-floating mb-3">
+															<input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Password" required>
+															<label for="inputPassword">Password</label>
+														</div>
+														<div class="text-center mb-2">
+															<button class="btn btn-login" type="submit">Submit</button>
+														</div>
+													</form>
+												</div>
+											</li>
+										{% endif %}
+									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-				</nav>
-				{% block submenus %}{% endblock %}
-			</section>
+				</div>
+			</nav>
+			{% block submenus %}{% endblock %}
+		</section>
 
-			<section id="main-content">
-				{% block body %}{% endblock %}
-				<button onclick="topFunction()" id="btnScrollTop" class="btn p-0 d-none" title="Go to top">
-				<img src="./img/arrow-up.png" alt="Arrow up" class="img-fluid">
-				</button>
-			</section>
+		<section id="main-content">
+			{% block body %}{% endblock %}
+			<button onclick="topFunction()" id="btnScrollTop" class="btn p-0 d-none" title="Go to top">
+			<img src="./img/arrow-up.png" alt="Arrow up" class="img-fluid">
+			</button>
+		</section>
 		{% include 'footer.twig' %}
 		<!-- -- -- -- -- -- -- -- -- -- -- -- JAVASCRIPTS -- -- -- -- -- -- -- -- -- -- -- -->
 		<script src="./common/jquery-3.3.1.min.js"></script>
