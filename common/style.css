@@ -109,6 +109,12 @@ body{
 	padding-bottom: 2px;
 }
 
+/**** Footer ****/
+
+.bottom_footer{
+	background-color: #1ABC9C;
+	color: #fff
+}
 
 /**** Sweet Alert 2 ****/
 .swal2-popup {
