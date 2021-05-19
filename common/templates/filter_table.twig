@@ -2,7 +2,7 @@
 	{% for key, data in metas %}
 		{% if data|length > 0 %}
 			<div>
-				<h1 class="mt-4">Filters for table {{ key }}</h1>
+				<h1 class="mt-2">Filters for table {{ key }}</h1>
 				{% for meta in data %}
 
 					<input class="form-control" type="hidden" name="field[{{meta.id}}]" value="{{ meta.field_name }}"/>
