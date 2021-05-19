@@ -104,7 +104,8 @@ body{
   text-decoration: none;
 }
 
-#menuNav a.nav-list:hover, #menuNav a.nav-list.active{
+#menuNav a.nav-list:hover, 
+#menuNav a.nav-list.active{
 	border-bottom: 3px solid #1ABC9C;
 	padding-bottom: 2px;
 }
