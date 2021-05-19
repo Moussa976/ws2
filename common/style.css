@@ -3,6 +3,10 @@ body{
   font-size: 18px;
 }
 
+body section#main{
+	padding-top: 5%;
+}
+
 /****** FILTERS *****/
 
 #edit_form h1{
@@ -16,9 +20,8 @@ body{
 
 #edit_form input{
 	border-radius:5px;
-	padding: 10px;
 
-	font-family: 1§px;
+	font-size: 16px;
 }
 
 .green-button{
