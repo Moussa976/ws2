@@ -1,6 +1,24 @@
-body{
+body
+{
+  height: 100%;
+  margin: 0;
   font-family: 'Nunito', sans-serif;
   font-size: 18px;
+}
+
+html {
+	height: 100%;
+}
+
+.content
+{
+	min-height: 100%;
+	margin: 0 auto -60px;
+}
+
+.footer
+{
+	height: 60px;
 }
 
 /****** FILTERS *****/
@@ -16,9 +34,7 @@ body{
 
 #edit_form input{
 	border-radius:5px;
-	padding: 10px;
-
-	font-family: 1§px;
+	font-family: 14px;
 }
 
 .green-button{
