@@ -1,4 +1,10 @@
 {% extends 'header.twig' %}
+{% block title %}
+	{% if table == 'record' %}DATABASE MANAGEMENT - Record{% endif %}
+	{% if table == 'production' %}DATABASE MANAGEMENT - Production{% endif %}
+	{% if table == 'speaker' %}DATABASE MANAGEMENT - Speaker{% endif %}
+	{% if table != 'record' and table != 'production' and table != 'speaker' %}DATABASE MANAGEMENT - Recalculate database{% endif %}
+{% endblock %}
 {% block submenus %}
 <nav>
 	<div class="nav nav-tabs row mx-0 text-center" id="subMenu2" role="tablist">

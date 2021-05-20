@@ -1,5 +1,11 @@
 {% extends 'header.twig' %}
-
+{% block title %}
+	{% if not basket %}
+		HOME
+	{% else %}
+		BASKET
+	{% endif %}
+{% endblock %}
 {% block body %}{% include 'record_table.twig' with {'data': data, 'metas':metas}%}{% endblock %}
 {% block javascripts %}
 <script type="text/javascript">

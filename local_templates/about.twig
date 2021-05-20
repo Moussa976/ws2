@@ -1,4 +1,11 @@
 {% extends 'header.twig' %}
+{% block title %}
+    {% if pid == 1 %}
+        ABOUT - MURIQUIS’ VOCAL COMMUNICATION
+    {% else %}
+        ABOUT - DESCRIPTION OF DATA AND TABLE
+    {% endif %}
+{% endblock %}
 {% block submenus %}
     <ul class='nav nav-tabs d-flex mb-4 mx-0' id='subMenu' role='tablist'>
         <li class='nav-item col text-center' role='presentation'>

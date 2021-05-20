@@ -1,8 +1,20 @@
 {% extends 'header.twig' %}
-
+{% block title %}
+	{% if  meta["id"] == -1 %}
+		Ajout d'un champ optionel
+	{% else %}
+		Edition d'un champ optionel #{{meta["id"]}}
+	{% endif %}
+{% endblock %}
 {% block body %}
 	<div class="container">
-		<h1 class="text-center mb-5">Edition d'un champ optionel</h1>
+		<h1 class="text-center mb-5">
+			{% if  meta["id"] == -1 %}
+				Ajout d'un champ optionel
+			{% else %}
+				Edition d'un champ optionel #{{meta["id"]}}
+			{% endif %}
+		</h1>
 		<form id="edit_form" method="post">
 			<input type="hidden" name="act" value="save">
 			<div class="table-responsive">
