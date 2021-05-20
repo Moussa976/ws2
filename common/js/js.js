@@ -23,11 +23,10 @@ function messageAlert(typealerte, message) {
         title: message
     })
 }
-$(function(){
-    $("#filtrer").click(function(){
-        $('#edit_form').submit()
-    })
-})
+function adds(){
+    console.log('dd')
+    $('#edit_form').submit()
+}
 
 //Get the button
 var mybutton = $("#btnScrollTop");
