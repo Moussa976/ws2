@@ -191,6 +191,13 @@ ul#subMenu a.nav-link:hover,
 
 }
 
+/**** index ****/
+
+.img_size_tab{
+	height: 40px;
+	width: 40px;
+}
+
 /**** Footer ****/
 
 .bottom_footer{
