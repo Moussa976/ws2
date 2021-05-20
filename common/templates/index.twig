@@ -39,16 +39,18 @@
 		$( ".dp" ).datepicker({
 			dateFormat: "dd/mm/yy",
 		});
+
 		if(window.matchMedia("(max-width:1199.98px)").matches) {
 			$("#scroll-form-filter").removeClass('bg-light')
-			console.log('enlever',$("#form_filter1").html())
+			console.log('enlever')
 			if($("#form_filter1").html() != "") {
 				$("#form_filter2").html($("#form_filter1").html())
 				$("#form_filter1").html("")
 			}
-		}else{
+		}
+		if(window.matchMedia("(min-width:1200px)").matches) {
 			$("#scroll-form-filter").addClass('bg-light')
-			console.log('ajouter',$("#form_filter2").html())
+			console.log('ajouter')
 			if($("#form_filter2").html() != "") {
 				$("#form_filter1").html($("#form_filter2").html())
 				$("#form_filter2").html("")
