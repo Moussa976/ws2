@@ -68,7 +68,7 @@ html, body
 }
 
 /****** TABLE ******/
-.rTable {
+/*.rTable {
   	display: table;
   	width: 99%;
 }
@@ -119,7 +119,7 @@ html, body
 }
 .rTableBody {
   	display: table-row-group;
-}
+}*/
 
 .btn-round {
   background-color: transparent;
@@ -162,6 +162,18 @@ img.img_nav:hover{
 /****** SUB-MENU *******/
 #myTab{
 	background-color: rgba(255, 255, 255, 0.8);
+}
+
+ul#myTab a.nav-link.active{
+	border-bottom: 3px solid;
+	border-color: var(--main-color);
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+ul#myTab a.nav-link{
+	border: 0;
+	color: #000;
 }
 
 /**** Footer ****/
@@ -229,4 +241,9 @@ img.img_nav:hover{
 	.about-position{
 		position: fixed;
 	}
+}
+
+section#main-content div#aboutContent1.container.mt-5,
+section#main-content div#aboutContent2.container.mt-5{
+	padding-top: 2%;
 }
