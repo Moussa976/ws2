@@ -237,7 +237,7 @@ ul#myTab a.nav-link{
 	}
 }
 /**** About ****/
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
 	.about-position{
 		position: fixed;
 	}
@@ -247,3 +247,10 @@ section#main-content div#aboutContent1.container.mt-5,
 section#main-content div#aboutContent2.container.mt-5{
 	padding-top: 2%;
 }
+
+@media (max-width: 1199.98px) {
+	#scroll-form-filter {
+		height: auto;
+	}
+}
+

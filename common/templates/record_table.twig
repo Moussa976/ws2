@@ -1,47 +1,53 @@
 <div class="container-fluid p-0">
 	<div class="row m-0">
-		<div class="col-xl-3 mb-2 pe-4 position-fixed">
-			<div class="p-3 bg-light" id="scroll-form-filter">
-				<div class="d-none d-xl-block" >
-					{% if not basket %}
+		{% if not basket %}
+			<div class="col-xl-3 mb-2 pe-4 position-fixed">
+				<div class="p-3 bg-light rounded" id="scroll-form-filter">
+					<div class="d-none d-xl-block" >
 						{% include 'filter_table.twig' with {'values': values, 'metas':metas}%}
-					{% else %}
-						<p class="text-center">
-							<a href='download_basket.php' class="btn text-download" target='_blank'><img src="./img/download.png" alt="download" class="img-fluid"><br>Download Basket</a>
-						</p>
-					{% endif %}
-				</div>
-				{# <div class="d-block d-xl-none">
-					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-						Filters
-					</button>
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen-sm-down">
-							<div class="modal-content">
-								<div class="modal-body">
-									<div class="row">
-										<div class="col-12">
-											<button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="d-block d-xl-none">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+							Filters
+						</button>
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen-sm-down">
+								<div class="modal-content">
+									<div class="modal-body">
+										<div class="row">
+											<div class="col-12">
+												<button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
 										</div>
-									</div>
 
-									{% if not basket %}
-										{% include 'filter_table.twig' with {'values': values, 'metas':metas}%}
-									{% else %}
-										<p class="text-center">
-											<a href='download_basket.php' class="btn text-download" target='_blank'><img src="./img/download.png" alt="download" class="img-fluid"><br>Download Basket</a>
-										</p>
-									{% endif %}
+										{% if not basket %}
+											{% include 'filter_table.twig' with {'values': values, 'metas':metas}%}
+										{% else %}
+											<p class="text-center">
+												<a href='download_basket.php' class="btn text-download" target='_blank'><img src="./img/download.png" alt="download" class="img-fluid"><br>Download Basket</a>
+											</p>
+										{% endif %}
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div> #}
+				</div>
 			</div>
-		</div>
-		<div class="offset-3 col-xl-9">
+		{% else %}
+			<div class="col-xl-3 mb-2 pe-4 ">
+				<div class="p-3">
+					<div class="" >
+						<p class="text-center">
+							<a href='download_basket.php' class="btn text-download" target='_blank'><img src="./img/download.png" alt="download" class="img-fluid"><br>Download Basket</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+		<div class="offset-xl-3 col-xl-9">
 			<div class="table-responsive">
 				<table class="table table-striped table-hover  ">
 					<thead>
