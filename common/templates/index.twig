@@ -50,9 +50,18 @@
 	function myFunction(x) {
 		if (x.matches) { // If media query matches
 			$("#block_filter").removeClass("position-fixed")
+			if($("#form_filter1").html() != "") {
+				$("#form_filter2").html($("#form_filter1").html())
+				$("#form_filter1").html("")
+			}
 		} else {
 			if(!$("#block_filter").hasClass("position-fixed")) {
 				$("#block_filter").addClass("position-fixed")
+			}
+			if($("#form_filter2").html() != "") {
+				$("#form_filter1").html($("#form_filter2").html())
+				$("#form_filter2").html("")
+				$("#modalFilter").modal('hide')
 			}
 		}
 	}
@@ -60,6 +69,7 @@
 	var x = window.matchMedia("(max-width:1199.98px)")
 	myFunction(x) // Call listener function at run time
 	x.addListener(myFunction) // Attach listener function on state changes
+
 </script>
 
 {% endblock %}
