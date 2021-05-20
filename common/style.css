@@ -227,6 +227,11 @@ ul#subMenu a.nav-link{
 /* Scroll Filter */
 #scroll-form-filter {
 	height: auto;
+	z-index: 1001 !important;
+}
+
+.play-z-index img{
+	z-index: 1000 !important;
 }
 
 @media (max-height: 870px) {

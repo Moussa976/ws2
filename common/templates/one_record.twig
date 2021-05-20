@@ -31,7 +31,7 @@
 			<button id="b_{{data[0]['record_id']}}_rem" onclick="javascript:rem_from_basket({{data[0]['record_id']}})" class="btn btn-round p-0 mx-1" type="button" {% if not data[0]["in_basket"]%}style='display:none'{% endif %}>
 				<img src="./img/cross.png" alt="cross" class="img-fluid">
 			</button>
-			<button  class="btn btn-round p-0 mx-1 dropdown" onclick="javascript:lireAudio({{data[0]['record_id']}})" type="button" id='audioDropdown{{data[0]["record_id"]}}' data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+			<button  class="btn btn-round p-0 mx-1 dropdown play-z-index" onclick="javascript:lireAudio({{data[0]['record_id']}})" type="button" id='audioDropdown{{data[0]["record_id"]}}' data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
 				<img src="./img/play.png" alt="play" class="img-fluid">
 			</button>
 			<div class="dropdown-menu p-2" aria-labelledby='audioDropdown{{data[0]["record_id"]}}'>

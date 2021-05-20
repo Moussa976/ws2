@@ -1,15 +1,15 @@
 <div class="container-fluid p-0">
 	<div class="row m-0">
 		{% if not basket %}
-			<div class="col-xl-3 mb-2 pe-4 " id="block_filter">
+			<div class="col-xl-3 mb-2 pe-xl-4 position-fixed" id="block_filter">
 				<div class="p-3 bg-light rounded" id="scroll-form-filter">
-					<div class="" id="form_filter1">{% include 'filter_table.twig' with {'values': values, 'metas':metas}%}</div>
-					<div class=" bg-warning">
-						<!-- Button trigger modal -->
-						<button type="button" class="btn btn-primary mt-5 float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
-							Filters
-						</button>
+					<a class="btn btn-primary d-block d-xl-none" data-bs-toggle="collapse" href="#collapseForm" role="button" aria-expanded="false" aria-controls="collapseForm">
+						<i class="fas fa-filter"></i> Filters
+					</a>
+					<div id="collapseForm" class="collapse d-xl-block">
+						{% include 'filter_table.twig' with {'values': values, 'metas':metas}%}
 					</div>
+
 				</div>
 			</div>
 		{% else %}
@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		{% endif %}
-		<div class=" col-xl-9">
+		<div class="offset-xl-3 col-xl-9">
 			<div class="table-responsive">
 				<table class="table table-striped table-hover  ">
 					<thead>
@@ -47,21 +47,6 @@
 						{% endfor %}
 					</tbody>
 				</table>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen-sm-down">
-		<div class="modal-content">
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-12">
-						<button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-				</div>
-				<div id="form_filter2"></div>
 			</div>
 		</div>
 	</div>
