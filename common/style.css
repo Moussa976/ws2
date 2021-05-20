@@ -225,8 +225,14 @@ img.img_nav:hover{
 	}
 }
 /**** About ****/
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
 	.about-position{
 		position: fixed;
 	}
 }
+@media (max-width: 1199.98px) {
+	#scroll-form-filter {
+		height: auto;
+	}
+}
+
