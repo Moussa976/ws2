@@ -1,6 +1,6 @@
 {% extends 'header.twig' %}
 {% block submenus %}
-    <ul class='nav nav-tabs d-flex mb-4 mx-0' id='myTab' role='tablist'>
+    <ul class='nav nav-tabs d-flex mb-4 mx-0' id='subMenu' role='tablist'>
         <li class='nav-item col text-center' role='presentation'>
             <a href='about.php?pid=1' class='nav-link {% if pid == 1 %}active{% endif %}' id='nav-pid1-tab'
                type='button' role='tab' aria-controls='nav-pid1' aria-selected='true'>MURIQUIS’ VOCAL COMMUNICATION</a>
@@ -13,7 +13,7 @@
 {% endblock %}
 {% block body %}
     {% if pid == 1 %}
-        <div id="about-img" class="container mt-5">
+        <div id="aboutContent1" class="container mt-5">
             <div class="row">
                 <h1>MURIQUIS</h1>
                 <div class="col-xl-4 order-xl-2">
@@ -113,7 +113,7 @@
     {% endif %}
 
     {% if pid == 2 %}
-        <div class="container mt-5">
+        <div id="aboutContent2" class="container mt-5">
             <div class="row">
                 <h1> DESCRIPTION OF DATA AND TABLE </h1>
                 <div class="col-xl-4 order-xl-2">
