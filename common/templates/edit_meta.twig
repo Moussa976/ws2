@@ -21,13 +21,13 @@
 						</tr>
 						<tr>
 							<th scope="row">Nom du champ</th>
-							<td><input name='field_name' value='{{meta["field_name"]}}'/></td>
+							<td><input class="form-control" name='field_name' value='{{meta["field_name"]}}'/></td>
 						</tr>
 						<tr>
 							<th scope="row">Type du champ</th>
 							<td>
 								{% if meta["id"] == -1 %}
-									<select name="type">
+									<select class="form-select" name="type">
 										{% for t in types %}
 											<option value="{{t}}" {% if t == meta["type"] %} selected {% endif %}>{{t}}</option>
 										{% endfor %}
@@ -39,12 +39,12 @@
 						</tr>
 						<tr>
 							<th scope="row">Intitulé du champ (pour la recherche)</th>
-							<td><input name='label' value='{{meta["label"]}}'/></td>
+							<td><input class="form-control" name='label' value='{{meta["label"]}}'/></td>
 						</tr>
 						<tr>
 							<th scope="row">Champ actif ?</th>
 							<td>
-								<select name="active">
+								<select class="form-select" name="active">
 									<option value="1" {% if '1' == meta["active"] %} selected {% endif %}>Oui</option>
 									<option value="0" {% if '0' == meta["active"] %} selected {% endif %}>Non</option>
 								</select>
