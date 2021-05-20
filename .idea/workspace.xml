@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="07c164ce-075b-4a65-b7f6-2ba7cf3981c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/local_templates/about.twig" beforeDir="false" afterPath="$PROJECT_DIR$/local_templates/about.twig" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sfRMeojGO3IBJ85M1g3zFFjAFI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07c164ce-075b-4a65-b7f6-2ba7cf3981c4" name="Default Changelist" comment="" />
+      <created>1621261610145</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621261610145</updated>
+      <workItem from="1621261611272" duration="2420000" />
+      <workItem from="1621264101654" duration="60000" />
+      <workItem from="1621273467456" duration="598000" />
+      <workItem from="1621340706218" duration="7800000" />
+      <workItem from="1621356241789" duration="2798000" />
+      <workItem from="1621410800702" duration="694000" />
+      <workItem from="1621411716827" duration="5056000" />
+      <workItem from="1621424602919" duration="8869000" />
+      <workItem from="1621494849434" duration="1406000" />
+    </task>
+    <task id="LOCAL-00001" summary="Button filter">
+      <created>1621343866967</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621343866967</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Filter index + scroll index + nav">
+      <created>1621361708413</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621361708413</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Upgrade Filters index">
+      <created>1621412395322</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621412395322</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Button filter" />
+    <MESSAGE value="Filter index + scroll index + nav" />
+    <MESSAGE value="Upgrade Filters" />
+    <MESSAGE value="Upgrade Filters index" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgrade Filters index" />
+  </component>
+</project>
