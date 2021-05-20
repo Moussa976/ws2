@@ -244,27 +244,43 @@ div#dataManagementContent.container{
 	z-index: 1000 !important;
 }
 
+section#main-content div#aboutContent1.container.mt-5,
+section#main-content div#aboutContent2.container.mt-5{
+	padding-top: 2%;
+}
+
+/**** About ****/
+@media (min-width: 1200px) {
+	.about-position {
+		position: fixed;
+	}
+
+	.about-position {
+		top: 140px;
+	}
+}
+
 @media (max-height: 870px) {
 	#scroll-form-filter {
 		height: 500px;
 		overflow-y: auto;
 		overflow-x: hidden;
 	}
-}
-/**** About ****/
-@media (min-width: 1200px) {
-	.about-position{
-		position: fixed;
+
+	.about-position {
+		top: 140px;
+		height: 400px;
 	}
 }
 
-section#main-content div#aboutContent1.container.mt-5,
-section#main-content div#aboutContent2.container.mt-5{
-	padding-top: 2%;
-}
 
 @media (max-width: 1199.98px) {
 	#scroll-form-filter {
+		height: auto;
+	}
+
+	.about-position {
+		top: auto;
 		height: auto;
 	}
 }
