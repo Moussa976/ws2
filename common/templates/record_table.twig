@@ -3,7 +3,7 @@
 		{% if not basket %}
 			<div class="col-xl-3 mb-2 pe-xl-4 position-fixed" id="block_filter">
 				<div class="p-3 bg-light rounded" id="scroll-form-filter">
-					<a class="btn btn-primary d-block d-xl-none" data-bs-toggle="modal" data-bs-target="#modalFilter">
+					<a class="btn btn-login d-block d-xl-none" data-bs-toggle="modal" data-bs-target="#modalFilter">
 						<i class="fas fa-filter"></i> Filters
 					</a>
 					<div id="form_filter1" class="d-xl-block">{% include 'filter_table.twig' with {'values': values, 'metas':metas}%}</div>
@@ -53,7 +53,7 @@
 <!-- Modal -->
 <div class="modal fade" id="modalFilter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalFilterLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen-sm-down">
-		<div class="modal-content">
+		<div class="modal-content border-modal">
 			<div class="modal-body">
 				<div class="row">
 					<div class="col-12">

@@ -249,7 +249,26 @@ section#main-content div#aboutContent2.container.mt-5{
 	padding-top: 2%;
 }
 
-/**** About ****/
+.border-modal {
+	border-image: linear-gradient(0.25turn,#3A97D3, #34B298) 30 / 3px !important;
+}
+
+/**** Text Download ****/
+.text-download {
+	color: #000;
+	text-decoration: underline;
+	text-decoration-color: var(--main-color);
+	text-decoration-thickness: 2px;
+	transition: 0.2s;
+}
+
+.text-download:hover{
+	text-decoration: none;
+	color: var(--main-color);
+}
+
+
+/**** Media matches ****/
 @media (min-width: 1200px) {
 	.about-position {
 		position: fixed;
@@ -285,16 +304,3 @@ section#main-content div#aboutContent2.container.mt-5{
 	}
 }
 
-/**** Text Download ****/
-.text-download {
-	color: #000;
-	text-decoration: underline;
-	text-decoration-color: var(--main-color);
-	text-decoration-thickness: 2px;
-	transition: 0.2s;
-}
-
-.text-download:hover{
-	text-decoration: none;
-	color: var(--main-color);
-}
