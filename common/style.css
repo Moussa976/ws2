@@ -221,6 +221,10 @@ ul#subMenu a.nav-link:hover{
 	border-radius: 30px;
 }
 
+/******** DATA MANAGEMENT CONTENT ********/
+div#dataManagementContent.container{
+	padding-top: 8%;
+}
 
 
 /* Scroll Filter */
