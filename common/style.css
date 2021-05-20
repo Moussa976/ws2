@@ -17,7 +17,7 @@ html, body
 #main-content
 {
 	min-height: 100%;
-	padding-top: 4.5%;
+	padding-top: 7%;
 	padding-bottom: 120px;
 	margin-bottom:-123px;
 }
@@ -212,7 +212,6 @@ ul#subMenu a.nav-link:hover,
 #btnScrollTop {
 	position: fixed;
 	bottom: 20px;
-	right: 130px;
 	z-index: 99;
 	border: none;
 	background-color: transparent;
@@ -220,6 +219,7 @@ ul#subMenu a.nav-link:hover,
 	border-radius: 50%;
 	height: 47px;
 	width: 47px;
+	left: 5%;
 }
 /**** BTN LOGIN ****/
 .btn-login {
