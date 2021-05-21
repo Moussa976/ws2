@@ -10,66 +10,80 @@
 {% block javascripts %}
 <script type="text/javascript">
 	$("#edit_form").validate();
-	function add_to_basket(rid){
-		$.ajax
-		    ({ 
-		        url: 'add_to_basket.php',
-		        data: "rid="+rid+"&act=add",
-		        type: 'post',
-		        success: function(result)
-		        {
-		            $('#b_'+rid+'_add').hide();
-					$('#b_'+rid+'_rem').show();
-					messageAlert("success", "This product has been added to your cart")
-		        }
-		    });
-	}
-	function rem_from_basket(rid){
-		$.ajax
-		    ({
-		        url: 'add_to_basket.php',
-		        data: "rid="+rid+"&act=rem",
-		        type: 'post',
-		        success: function(result)
-		        {
-		            $('#b_'+rid+'_rem').hide();
-					$('#b_'+rid+'_add').show();
-					messageAlert("success", "This product has been removed from your cart")
-		        }
-		    });
-	}
-	function clear_elt(element_id){
-		$('#'+element_id).val('');
-	}
-	$( function() {
-		$( ".dp" ).datepicker({
-			dateFormat: "dd/mm/yy",
-		});
-	} );
-
-	function myFunction(x) {
-		if (x.matches) { // If media query matches
-			$("#block_filter").removeClass("position-fixed")
-			if($("#form_filter1").html() != "") {
-				$("#form_filter2").html($("#form_filter1").html())
-				$("#form_filter1").html("")
-			}
-		} else {
-			if(!$("#block_filter").hasClass("position-fixed")) {
-				$("#block_filter").addClass("position-fixed")
-			}
-			if($("#form_filter2").html() != "") {
-				$("#form_filter1").html($("#form_filter2").html())
-				$("#form_filter2").html("")
-				$("#modalFilter").modal('hide')
-			}
-		}
-	}
 
 	var x = window.matchMedia("(max-width:1199.98px)")
 	myFunction(x) // Call listener function at run time
 	x.addListener(myFunction) // Attach listener function on state changes
-
 </script>
+
+{# Trier tableau #}
+<script type="text/javascript">
+	/*VERSION FACTORISEE*/
+	const compare = (ids, asc) => (row1, row2) => {
+		const tdValue = (row, ids) => row.children[ids].textContent;
+		const tri = (v1, v2) => v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2);
+		return tri(tdValue(asc ? row1 : row2, ids), tdValue(asc ? row2 : row1, ids));
+	};
+
+	const tbody = document.querySelector('tbody');
+	const thx = document.querySelectorAll('th');
+	const trxb = tbody.querySelectorAll('tr');
+	thx.forEach(th => th.addEventListener('click', () => {
+		var select_sort = false;
+
+		if (th.classList.contains('asc')) {
+			select_sort = true;
+		} else if (th.classList.contains('desc')){
+			select_sort = false;
+		} else {
+			select_sort = true;
+		}
+
+		arrows_filters(select_sort, th)
+
+
+		if (th.classList.contains('asc')) {
+			th.classList.remove("asc")
+			th.classList.add("desc")
+			th.children[0].children[0].classList.add('fa-long-arrow-alt-down')
+		} else if (th.classList.contains('desc') ){
+			th.classList.remove("desc")
+			th.classList.add("asc")
+			th.children[0].children[0].classList.add('fa-long-arrow-alt-up')
+		} else {
+			th.classList.remove("asc")
+			th.children[0].children[0].classList.add('fa-long-arrow-alt-down')
+		}
+
+		let classe = Array.from(trxb).sort(compare(Array.from(thx).indexOf(th), this.asc = !this.asc));
+		classe.forEach(tr => tbody.appendChild(tr));
+	}));
+
+	function arrows_filters(select_sort, leth) {
+
+		document.querySelectorAll('th').forEach(unth => {
+			if (unth.classList.contains('asc')) {
+				unth.classList.remove("asc")
+			}
+			if (unth.classList.contains('desc') ){
+				unth.classList.remove("desc")
+			}
+			if(unth.children[0].children[0].classList.contains('fa-long-arrow-alt-up')) {
+				unth.children[0].children[0].classList.remove('fa-long-arrow-alt-up')
+			}
+			if(unth.children[0].children[0].classList.contains('fa-long-arrow-alt-down')) {
+				unth.children[0].children[0].classList.remove('fa-long-arrow-alt-down')
+			}
+			unth.children[0].children[0].classList.add("fa-arrows-alt-v")
+		});
+
+		if (select_sort) {
+			leth.classList.add("asc")
+		} else {
+			leth.classList.add("desc")
+		}
+	}
+</script>
+
 
 {% endblock %}

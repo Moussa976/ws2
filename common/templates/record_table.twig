@@ -23,20 +23,19 @@
 		{% endif %}
 		<div class="{% if not basket %}offset-xl-3{% endif %} col-xl-9">
 			<div class="table-responsive">
-				<table class="table table-striped table-hover  ">
+				<table class="table table-striped table-hover tablemanager">
 					<thead>
 						<tr>
 							{% for data in metas["record"] %}
-								<th scope="col">{{data["label"]}}</th>
+								<th class="align-middle" scope="col">{{data["label"]}} <span class="ms-2"><i class="fas tri_icon fa-arrows-alt-v"></i></span></th>
 							{% endfor %}
-						  	<th scope="col"></th>
+						  	<th class="align-middle" scope="col"> <span class="ms-2"><i class="fas tri_icon fa-arrows-alt-v"></i></span></th>
 							{% for data in metas["production"] %}
-								<th scope="col">{{data["label"]}}</th>
+								<th class="align-middle" scope="col">{{data["label"]}} <span class="ms-2"><i class="fas tri_icon fa-arrows-alt-v"></i></span></th>
 							{% endfor %}
 							{% for data in metas["speaker"] %}
-								<th scope="col">{{data["label"]}}</th>
+								<th class="align-middle" scope="col">{{data["label"]}} <span class="ms-2"><i class="fas tri_icon fa-arrows-alt-v"></i></span></th>
 							{% endfor %}
-						  	<th scope="col"></th>
 						</tr>
 					</thead>
 					<tbody>

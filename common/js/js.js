@@ -1,3 +1,62 @@
+// Basket
+function add_to_basket(rid){
+    $.ajax
+        ({ 
+            url: 'add_to_basket.php',
+            data: "rid="+rid+"&act=add",
+            type: 'post',
+            success: function(result)
+            {
+                $('#b_'+rid+'_add').hide();
+                $('#b_'+rid+'_rem').show();
+                messageAlert("success", "This product has been added to your cart")
+            }
+        });
+}
+function rem_from_basket(rid){
+    $.ajax
+        ({
+            url: 'add_to_basket.php',
+            data: "rid="+rid+"&act=rem",
+            type: 'post',
+            success: function(result)
+            {
+                $('#b_'+rid+'_rem').hide();
+                $('#b_'+rid+'_add').show();
+                messageAlert("success", "This product has been removed from your cart")
+            }
+        });
+}
+function clear_elt(element_id){
+    $('#'+element_id).val('');
+}
+$( function() {
+    $( ".dp" ).datepicker({
+        dateFormat: "dd/mm/yy",
+    });
+} );
+
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        $("#block_filter").removeClass("position-fixed")
+        if($("#form_filter1").html() != "") {
+            $("#form_filter2").html($("#form_filter1").html())
+            $("#form_filter1").html("")
+        }
+    } else {
+        if(!$("#block_filter").hasClass("position-fixed")) {
+            $("#block_filter").addClass("position-fixed")
+        }
+        if($("#form_filter2").html() != "") {
+            $("#form_filter1").html($("#form_filter2").html())
+            $("#form_filter2").html("")
+            $("#modalFilter").modal('hide')
+        }
+    }
+}
+
+
+
 //  Lire une vidéo
 function lireAudio(record_id) {
     $('.audiosRecord').each(function(){
