@@ -23,10 +23,6 @@ html, body
 	margin-bottom:-123px;
 }
 
-.footer
-{
-	height: 123px;
-}
 
 /****** FILTERS *****/
 
@@ -82,14 +78,14 @@ html, body
 }
 
 .btn-login{
-	background: linear-gradient(0.25turn, #3A97D3, #35A3C1, #34ADA8, #34b29A, #34B298);
+	background: linear-gradient(0.25turn, var(--degrade-color-1), var(--degrade-color-2), var(--degrade-color-3), var(--degrade-color-4), var(--degrade-color-5));
 	color: #FFF;
 	border-radius: 30px;
 }
 
 .btn-login:hover{
 	background: #fff;
-	border : linear-gradient(0.25turn, #3A97D3, #35A3C1, #34ADA8, #34b29A, #34B298);
+	border: 2px solid var(--degrade-color-3);
 	color: #000;
 }
 
@@ -185,7 +181,8 @@ ul#subMenu a.nav-link:hover,
 
 .bottom_footer{
 	background-color: #1ABC9C;
-	color: #fff
+	color: #fff;
+	max-height: 123px;
 }
 
 /**** Sweet Alert 2 ****/
