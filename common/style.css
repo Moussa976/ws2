@@ -275,5 +275,9 @@ section#main-content div#aboutContent2.container.mt-5{
 		top: auto;
 		height: auto;
 	}
+
+	.bottom_footer {
+		font-size: 12px;
+	}
 }
 
