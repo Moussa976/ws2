@@ -6,11 +6,14 @@
 
   /********* TABLE COLORS *************/
 
-  /********** DEGRADE DE COULEUR *************/
+  /********** LOGIN BUTTON ************/
   --degrade-color-1:#3A97D3;
   --degrade-color-2:#35A3C1;
   --degrade-color-3:#34ADA8;
   --degrade-color-4:#34b29A;
   --degrade-color-5:#34B298;
+
+  /******** TEXT COLOR FOOTER ********/
+  --font-color-footer: #fff;
 
 }
