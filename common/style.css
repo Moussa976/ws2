@@ -236,14 +236,6 @@ section#main-content div#aboutContent2.container.mt-5{
 	padding-top: 2%;
 }
 
-.border-modal {
-	border-image: linear-gradient(0.25turn,#3A97D3, #34B298) 30 / 3px !important;
-}
-
-/**** Text Download ****/
-
-
-
 
 /**** Media matches ****/
 @media (min-width: 1200px) {
