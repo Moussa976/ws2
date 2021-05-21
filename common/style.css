@@ -23,10 +23,6 @@ html, body
 	margin-bottom:-123px;
 }
 
-.footer
-{
-	height: 123px;
-}
 
 /****** FILTERS *****/
 
@@ -185,7 +181,8 @@ ul#subMenu a.nav-link:hover,
 
 .bottom_footer{
 	background-color: #1ABC9C;
-	color: #fff
+	color: #fff;
+	max-height: 123px;
 }
 
 /**** Sweet Alert 2 ****/
