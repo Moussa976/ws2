@@ -23,6 +23,10 @@ html, body
 	margin-bottom:-123px;
 }
 
+.separation{
+	padding-top: 20px;
+}
+
 /****** TYPOGRAPHY *****/
 
 @font-face {
@@ -213,6 +217,11 @@ tr:hover{
 	background-color: var(--table-hover-color);
 	
 }
+
+table.table tbody{
+	text-align:center
+}
+
 /**** FOOTER ****/
 
 .bottom_footer{
