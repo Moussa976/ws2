@@ -195,6 +195,16 @@ ul#subMenu a.nav-link:hover,
 	width: 40px;
 }
 
+table.table thead{
+	background-color: var(--main-color);
+	color: var(--thead-font-color);
+	border-bottom: 2px solid var(--main-color);
+}
+
+tr:hover{
+	background-color: var(--table-hover-color);
+	
+}
 /**** FOOTER ****/
 
 .bottom_footer{
