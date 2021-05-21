@@ -129,9 +129,26 @@ html, body
 .btn-round {
   background-color: transparent;
   border-radius: 50%;
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
 }
+
+.btn-play {
+	background: url("../img/picto_play/play.png") center no-repeat;
+	background-size: 40px;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+}
+
+.btn-play:visited, .btn-play:active, .btn-play.active {
+	background: url("../img/picto_play/play_done.png") center no-repeat !important;
+	background-size: 15px;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+}
+
 
 /****** MENU *******/
 

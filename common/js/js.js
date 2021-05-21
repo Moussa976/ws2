@@ -62,6 +62,9 @@ function lireAudio(record_id) {
     $('.audiosRecord').each(function(){
         $(this)[0].pause()
     })
+    if(!$('#audioDropdown'+record_id).hasClass('active')){
+        !$('#audioDropdown'+record_id).addClass('active')
+    }
     $('#audio'+record_id)[0].play()
 }
 // SweetAlertMessage
