@@ -3,7 +3,7 @@ html, body
 {
   height: 100%;
   margin: 0;
-  font-family: 'Nunito', sans-serif;
+	font-family: Nunito-regular;
   font-size: 18px;
 }
 
@@ -23,6 +23,12 @@ html, body
 	margin-bottom:-123px;
 }
 
+/****** TYPOGRAPHY *****/
+
+@font-face {
+	font-family: Nunito-regular;
+	src: url(./css/font/Nunito/Nunito-Regular.ttf);
+}
 
 /****** FILTERS *****/
 
