@@ -1,10 +1,23 @@
 :root {
 
+  /* NOTES */
+
+  /*
+  Couleur dominante : #1ABC9C (hexadecimal) / rgb(26,188,156) 
+  Les variable "font" concernent les textes 
+  */
+
+
   /********* BODY COLORS **************/
 
   --main-color:#1ABC9C;
 
   /********* TABLE COLORS *************/
+  --thead-font-color:#fff;
+
+  /* IMPORTANT - Ne pas toucher le 0.4 qui correspond à l'opacité, 
+  Les 3 première valeur correspondent à la couleurs choisie */
+  --table-hover-color:rgba(26,188,156, 0.4);
 
   /********** LOGIN BUTTON ************/
   --degrade-color-1:#3A97D3;
