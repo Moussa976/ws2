@@ -47,82 +47,53 @@ html, body
 	font-size: 16px;
 }
 
+/****** BUTTONS ********/
+
 .green-button{
-	border: 2px solid #2ECC71;
+	background-color: #2ECC71;
+	color:#fff;
 	border-radius: 30px;
+	font-size: 18px;
 }
 
 .green-button:hover{
-	background-color: #2ECC71;
-	color: white;
+	background-color: #fff;
+	border: 2px solid #2ECC71;
+	color: #000;
 }
 
 .red-button{
-	border: 2px solid #E74C3C;
+	background-color: #E74C3C;
 	border-radius: 30px;
+	color: #fff;
+	font-size: 18px;
 }
 
 .red-button:hover{
-	background-color: #E74C3C;
-	color: white;
+	
+	border: 2px solid #E74C3C;
+	background-color: #fff;
+	color: #000;
 }
+
  img.imgDownload{
-	 margin-bottom: 10px;
- }
+	margin-bottom: 10px;
+}
+
+.btn-login{
+	background: linear-gradient(0.25turn, #3A97D3, #35A3C1, #34ADA8, #34b29A, #34B298);
+	color: #FFF;
+	border-radius: 30px;
+}
+
+.btn-login:hover{
+	background: #fff;
+	border : linear-gradient(0.25turn, #3A97D3, #35A3C1, #34ADA8, #34b29A, #34B298);
+	color: #000;
+}
+
 
 /****** TABLE ******/
-/*.rTable {
-  	display: table;
-  	width: 99%;
-}
-.rTable .odd {
-	background-color: var(--table-odd-background-color);
-	color: var(--table-odd-color);
-}
-.rTable .even {
-	background-color: var(--table-even-background-color);
-	color: var(--table-even-color);
-}
-
-.rTableRow {
-  	display: table-row;
-	background-color: var(--table-even-background-color);
-	color: var(--table-odd-color);
-}
-.rTableRow:hover {
-  	background-color: var(--table-hover-background-color);
-	color: var(--table-hover-color);
-}
-
-.rTableCell, .rTableHead {
-  	display: table-cell;
-  	padding: 3px 10px;
-  	border: 1px solid var(--table-cell-border-color);
-	font-weight: normal;
-}
-.rTableHeadCell {
-	color: var(--table-header-color);
-	display: table-cell;
-  	background-color: var(--table-header-background-color);
-  	font-weight: bold;
-  	width:10%;
-  	padding: 3px 10px;
-  	border: 1px solid var(--table-cell-border-color);
-}
-.rTableHeading {
-	color: var(--table-header-color);
-  	display: table-header-group;
-  	background-color: var(--table-header-background-color);
-  	font-weight: bold;
-}
-.rTableFoot {
-  	display: table-footer-group;
-  	font-weight: bold;
-  	background-color: #ddd;
-}
-.rTableBody {
-  	display: table-row-group;
-}*/
 
 .btn-round {
   background-color: transparent;
@@ -228,12 +199,7 @@ ul#subMenu a.nav-link:hover,
 	width: 47px;
 	left: 5%;
 }
-/**** BTN LOGIN ****/
-.btn-login {
-	background: linear-gradient(0.25turn, #3A97D3, #35A3C1, #34ADA8, #34b29A, #34B298);
-	color: #FFF;
-	border-radius: 30px;
-}
+
 
 /******** DATA MANAGEMENT CONTENT ********/
 div#dataManagementContent.container{
