@@ -208,7 +208,7 @@ ul#subMenu a.nav-link:hover,
 table.table thead{
 	background-color: var(--main-color);
 	color: var(--thead-font-color);
-	border-bottom: 2px solid var(--main-color);
+	border-bottom: 0;
 
 	text-align: center;
 }
@@ -220,6 +220,10 @@ tr:hover{
 
 table.table tbody{
 	text-align:center
+}
+
+table.table tbody td.align-middle{
+	border-bottom-width: 0;
 }
 
 /**** FOOTER ****/
