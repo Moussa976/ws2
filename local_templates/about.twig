@@ -12,11 +12,13 @@
             <a href='about.php?pid=1' class='nav-link {% if pid == 1 %}active{% endif %}' id='nav-pid1-tab'
                type='button' role='tab' aria-controls='nav-pid1' aria-selected='true'>Muriquis' vocal communiation</a>
         </li>
+
         <li class='nav-item col text-center' role='presentation'>
             <a href='about.php?pid=2' class='nav-link col {% if pid == 2 %}active{% endif %}' id='nav-pid2-tab'
                type='button' role='tab' aria-controls='nav-pid2' aria-selected='false'>Description of data and table</a>
         </li>
     </ul>
+    
 {% endblock %}
 {% block body %}
     {% if pid == 1 %}
