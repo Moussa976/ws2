@@ -13,6 +13,7 @@
 		<link href="./common/css/plugin/dark.css" rel="stylesheet">
 		<!-- CSS width BOOTSTRAP -->
 		<link rel="stylesheet" type="text/css" href="./common/css/widthme.css">
+
 		<!-- Font-awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
@@ -20,6 +21,7 @@
 		<link rel="stylesheet" type="text/css" href="./common/style.css">
 
 	</head>
+
 	<body>
 		<section class="fixed-top">
 			<nav class="navbar navbar-expand-lg navbar-light" id="menuNav">
@@ -87,11 +89,14 @@
 
 		<section id="main-content">
 			<div class="pt-5 pt-xl-0">{% block body %}{% endblock %}
+
 			<button onclick="topFunction()" id="btnScrollTop" class="btn p-0 d-none" title="Go to top">
-			<img src="./img/arrow-up.png" alt="Arrow up" class="img-fluid">
+				<img src="./img/arrow-up.png" alt="Arrow up" class="img-fluid">
 			</button>
 		</section>
+
 		{% include 'footer.twig' %}
+
 		<!-- -- -- -- -- -- -- -- -- -- -- -- JAVASCRIPTS -- -- -- -- -- -- -- -- -- -- -- -->
 		<script src="./common/jquery-3.3.1.min.js"></script>
 		<script src="./common/jquery-ui-1.12.1/jquery-ui.min.js"></script>
