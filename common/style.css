@@ -54,7 +54,7 @@ html, body
 }
 
 .green-button:hover{
-	background-color: #fff;
+	background-color: #f8f9fa;
 	border: 2px solid #2ECC71;
 	color: #000;
 	transition: 0.2s;
@@ -70,7 +70,7 @@ html, body
 .red-button:hover{
 	
 	border: 2px solid #E74C3C;
-	background-color: #fff;
+	background-color:#f8f9fa;
 	color: #000;
 	transition: 0.2s;
 }
@@ -78,19 +78,6 @@ html, body
  img.imgDownload{
 	margin-bottom: 10px;
 }
-
-/*.btn-login{
-	background: linear-gradient(0.25turn, var(--degrade-color-1), var(--degrade-color-2), var(--degrade-color-3), var(--degrade-color-4), var(--degrade-color-5));
-	color: #FFF;
-	border-radius: 30px;
-}
-
-.btn-login:hover{
-	background: #fff;
-	border: 2px solid var(--degrade-color-3);
-	color: #000;
-	transition: 0.2s;
-}*/
 
 .btn-login {
     position: relative;
