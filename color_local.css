@@ -3,8 +3,16 @@
   /* NOTES */
 
   /*
-  Couleur dominante : #1ABC9C (hexadecimal) / rgb(26,188,156) 
-  Les variable "font" concernent les textes 
+  --main-color: Couleur choisi pour le corpus (#1ABC9C (hexadecimal) / rgb(26,188,156) )
+  --thead-font-color: Couleur du texte concernant le nom des colonnes des tableaux (blanc [#fff] ou noir [2D3436] selon la couleur de fond
+  --table-hover-color : rgba(red,green,blue,opanity) - /!\ ne pas toucher à la dernière variable de la fonction
+  --degrade-color-n : Permet de réaliser un dégradé en spécifiant 6 couleurs différentes
+  --fon-color-footer : Permet de modifier la couleur du texte du footer selon la couleur de fond (blanc [#fff] ou noir [#2D3436])
+
+  --picto-play : il suffit de changer l'url pour changer la couleur, par exemple si je souhaite ettre le plicto play noir je remplace
+    l'url présente par "../img/picto_play/black/play.png" 
+
+  --picto-played : même principe qu'au dessus. Ce picto permet de distinguer si on a lu ou pas l'enregistrement
   */
 
 
@@ -16,7 +24,7 @@
   --thead-font-color:#fff;
 
   /* IMPORTANT - Ne pas toucher le 0.4 qui correspond à l'opacité, 
-  Les 3 première valeur correspondent à la couleurs choisie */
+  Les 3 première valeur correspondent à la couleur choisie */
   --table-hover-color:rgba(26,188,156, 0.4);
 
   /********** LOGIN BUTTON ************/
@@ -29,4 +37,7 @@
   /******** TEXT COLOR FOOTER ********/
   --font-color-footer: #fff;
 
+  /******** PICTO PLAY ********/
+  --picto-play: url("../img/picto_play/play.png");
+  --picto-played: url("../img/picto_play/played.png");
 }
