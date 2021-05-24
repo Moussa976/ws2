@@ -2,7 +2,7 @@
 
 ## Problématique 
 
-Proposé une refonte graphique du site avec une interfaceaccessible et très simple. 
+Proposer une refonte graphique du site avec une interfaceaccessible et très simple. 
 
 ## Technologies utilisées
 
@@ -15,12 +15,12 @@ Proposé une refonte graphique du site avec une interfaceaccessible et très sim
 ## Les fichiers modifiés
 
 - common/
-    - templates/* : refontes de tous les templates
+    - templates/* : refonte de tous les templates
     - style.css : refonte totale du css
     - img/ picto_play : dossier stockant tous les picto play de différentes couleurs (les plus courantes)
     - img : refonte de tous les pictos
 - local_templates
-    - about.twig : refonte totale (Le submenu à été totalement changé, pour ajouter de nouveau onglet il suffit tout simplement de dupliquer un <li>)
+    - about.twig : refonte totale (Le submenu a été totalement changé, pour ajouter de nouveau onglet il suffit tout simplement de dupliquer un <li>)
     - footer.twig : refonte graphique
 - color_local.css
     - Notice d'utilisation dans le fichier
