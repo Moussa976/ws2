@@ -26,4 +26,4 @@ Proposé une refonte graphique du site avec une interfaceaccessible et très sim
 
 
 Merci pour nous avoir proposé ce projet 😊
-- Moussa, Steven, Valentine 
+Moussa, Steven, Valentine 
