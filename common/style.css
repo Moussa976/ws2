@@ -1,3 +1,10 @@
+/****** TYPOGRAPHY *****/
+
+@font-face {
+	font-family: Nunito-regular;
+	src: url(./css/font/Nunito/Nunito-Regular.ttf);
+}
+
 /*********** GENERAL ***************/
 html, body
 {
@@ -27,14 +34,7 @@ html, body
 	padding-top: 20px;
 }
 
-/****** TYPOGRAPHY *****/
-
-@font-face {
-	font-family: Nunito-regular;
-	src: url(./css/font/Nunito/Nunito-Regular.ttf);
-}
-
-/****** FILTERS *****/
+/****** FORM FILTERS *****/
 
 #edit_form h1{
 	font-size: 20px;
@@ -52,6 +52,22 @@ html, body
 #edit_form input{
 	border-radius:5px;
 	font-size: 16px;
+}
+
+a.ui-datepicker-prev.ui-corner-all:hover,
+a.ui-datepicker-next.ui-corner-all:hover{
+	background: transparent;
+	border: 2px solid var(--main-color);
+}
+
+/****** DATEPICKER *****/
+div#ui-datepicker-div.ui-widget.ui-widget-content{
+	background: #fff;
+	font-family: 'Nunito', sans-serif;
+}
+.ui-datepicker div.ui-datepicker-header{
+	background: #fff;
+	border: 0;
 }
 
 /****** BUTTONS ********/
@@ -222,7 +238,7 @@ ul#subMenu a.nav-link:hover,
 	width: 40px;
 }
 
-table.table thead{
+div.table-responsive table.table thead{
 	background-color: var(--main-color);
 	color: var(--thead-font-color);
 	border-bottom: 0;
@@ -230,7 +246,7 @@ table.table thead{
 	text-align: center;
 }
 
-tr:hover{
+div.table-responsive table.table tr:hover{
 	background-color: var(--table-hover-color);
 	
 }
