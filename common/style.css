@@ -171,7 +171,7 @@ div#ui-datepicker-div.ui-widget.ui-widget-content{
 }
 
 .btn-play {
-	background: url("../img/picto_play/play.png") center no-repeat;
+	background: var(--picto-play) center no-repeat;
 	background-size: 40px;
 	border-radius: 50%;
 	height: 40px;
@@ -179,7 +179,7 @@ div#ui-datepicker-div.ui-widget.ui-widget-content{
 }
 
 .btn-play:visited, .btn-play:active, .btn-play.active {
-	background: url("../img/picto_play/play_done.png") center no-repeat !important;
+	background: var(--picto-played) center no-repeat !important;
 	background-size: 15px;
 	border-radius: 50%;
 	height: 40px;
