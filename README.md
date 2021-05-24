@@ -10,6 +10,7 @@ Proposé une refonte graphique du site avec une interfaceaccessible et très sim
 - MySQL 8
 - Twig 3x
 - Bootstrap 5 : [Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- Sweet Alert 2 : [Documentation](https://sweetalert2.github.io/)
 
 ## Les fichiers modifiés
 
